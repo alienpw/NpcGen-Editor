@@ -5,7 +5,7 @@
 		<Language>1</Language>
 		<Interface_Color>1</Interface_Color>
 		<ElementPath>D:\element\data\elements.data</ElementPath>
-		<NpcgenPath>C:\Users\Luka\Desktop\npcgen.data</NpcgenPath>
+		<NpcgenPath>C:\Users\Desktop\npcgen.data</NpcgenPath>
 		<SurfacesPath>D:\Perfect World\element\surfaces.pck</SurfacesPath>
 		<ClientVersion>7</ClientVersion>
 		<MobsOrNpcsHotKey>0+0</MobsOrNpcsHotKey>
