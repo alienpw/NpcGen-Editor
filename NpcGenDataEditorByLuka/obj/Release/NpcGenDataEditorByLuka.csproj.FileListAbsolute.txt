@@ -1,0 +1,23 @@
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\Npcgen Editor By Luka.exe.config
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\Npcgen Editor By Luka.exe
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\Npcgen Editor By Luka.pdb
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\Cyotek.Windows.Forms.ImageBox.dll
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\LBLIBRARY.dll
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\Magick.NET-Q8-AnyCPU.dll
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\UIExceptionHandler.dll
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\UIExceptionHandlerWinForms.dll
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\Cyotek.Windows.Forms.ImageBox.xml
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\LBLIBRARY.pdb
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\Magick.NET-Q8-AnyCPU.xml
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\UIExceptionHandler.pdb
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\UIExceptionHandlerWinForms.pdb
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\obj\Release\NpcGenDataEditorByLuka.csprojResolveAssemblyReference.cache
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\obj\Release\NpcGenDataEditorByLuka.DynamicObjectsForm.resources
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\obj\Release\NpcGenDataEditorByLuka.Form1.resources
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\obj\Release\NpcGenDataEditorByLuka.MobsNpcsForm.resources
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\obj\Release\NpcGenDataEditorByLuka.Properties.Resources.resources
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\obj\Release\NpcGenDataEditorByLuka.ShowLocationWindow.resources
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\obj\Release\NpcGenDataEditorByLuka.csproj.GenerateResource.Cache
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\obj\Release\Npcgen Editor By Luka.exe
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\obj\Release\Npcgen Editor By Luka.pdb
+C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\Release\DevILNet.dll
