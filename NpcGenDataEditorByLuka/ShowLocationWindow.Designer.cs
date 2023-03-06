@@ -33,6 +33,7 @@
             this.pictureBox1 = new Cyotek.Windows.Forms.ImageBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(535, 611);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // contextMenuStrip1
             // 
@@ -87,9 +89,6 @@
         private Cyotek.Windows.Forms.ImageBox pictureBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-
-
-
-
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }

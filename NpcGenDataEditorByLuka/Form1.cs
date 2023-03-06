@@ -31,6 +31,7 @@ namespace NpcGenDataEditorByLuka
             catch { }
         }
         #region MainMeanings
+        List<offsets> Offsets = new List<offsets>();
         List<int> SearchMonsters;
         List<int> SearchResources;
         List<int> SearchDynamics;
@@ -38,7 +39,7 @@ namespace NpcGenDataEditorByLuka
         NpcGen Read;
         Elementsdata Element;
         Pck_engine PckFile;
-        ShowLocationWindow MapForm;
+        TesteMapa MapForm;
         MobsNpcsForm ChooseFromElementsForm;
         DynamicObjectsForm DynamicForm;
         List<ClassDefaultMonsters> MonstersContact;
@@ -196,176 +197,47 @@ namespace NpcGenDataEditorByLuka
                     MessageBox.Show("Game isn't running!!...", "Npcgen Editor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return null;
             }
-            else
+            offsets offsets2 = Offsets[Version_combobox.SelectedIndex];
+            VAMemory vAMemory = new VAMemory("elementclient");
+            int num = 0;
+            for (int i = 0; i < 3; i++)
             {
-                int[] Adresses = new int[3];
-                int DX = 0;
-                int DY = 0;
-                int DZ = 0;
-                int PX = 0;
-                int PY = 0;
-                int PZ = 0;
-                Process[] Procceses = Process.GetProcessesByName("elementclient");
-                IntPtr Process_name = (IntPtr)0;
-                if (Procceses.Length > 0)
-                {
-                    Process_name = Procceses[0].Handle;
-                }
-                byte[] size = new byte[4];
-                int BaseOffset = 0;
-                switch (Version_combobox.SelectedIndex)
-                {
-                    case 0:
-                        {
-                            Adresses[0] = 0x00C0CDEC;
-                            Adresses[1] = 0x00000034;
-                            Adresses[2] = 0x0000131C;
-                            DX = 0x0000015C;
-                            DY = 0x00000160;
-                            DZ = 0x00000164;
-                            PX = 0x0000017C;
-                            PY = 0x00000180;
-                            PZ = 0x00000184;
-                            break;
-                        }
-                    case 1:
-                        {
-                            Adresses[0] = 0x00B280C4;
-                            Adresses[1] = 0x00000034;
-                            Adresses[2] = 0x000010E8;
-                            DX = 0x0000015C;
-                            DY = 0x00000160;
-                            DZ = 0x00000164;
-                            PX = 0x0000017C;
-                            PY = 0x00000180;
-                            PZ = 0x00000184;
-                            break;
-                        }
-                    case 2:
-                        {
-                            Adresses[0] = 0x00B9029C;
-                            Adresses[1] = 0x00000034;
-                            Adresses[2] = 0x000011D8;
-                            DX = 0x0000015C;
-                            DY = 0x00000160;
-                            DZ = 0x00000164;
-                            PX = 0x0000017C;
-                            PY = 0x00000180;
-                            PZ = 0x00000184;
-                            break;
-                        }
-                    case 3:
-                        {
-                            Adresses[0] = 0x00C0CDEC;
-                            Adresses[1] = 0x00000034;
-                            Adresses[2] = 0x0000131C;
-                            DX = 0x00000160;
-                            DY = 0x00000164;
-                            DZ = 0x00000168;
-                            PX = 0x00000180;
-                            PY = 0x00000184;
-                            PZ = 0x00000188;
-                            break;
-                        }
-                    case 4:
-                        {
-                            Adresses[0] = 0x00C392CC;
-                            Adresses[1] = 0x00000034;
-                            Adresses[2] = 0x00001340;
-                            DX = 0x0000015C;
-                            DY = 0x00000160;
-                            DZ = 0x00000164;
-                            PX = 0x00000180;
-                            PY = 0x00000184;
-                            PZ = 0x00000188;
-                            break;
-                        }
-                    case 5:
-                        {
-
-                            Adresses[0] = 0x00C76DCC;
-                            Adresses[1] = 0x0000002C;
-                            Adresses[2] = 0x00001420;
-                            DX = 0x0000015C;
-                            DY = 0x00000160;
-                            DZ = 0x00000164;
-                            PX = 0x00000180;
-                            PY = 0x00000184;
-                            PZ = 0x00000188;
-                            break;
-                        }
-                    case 6:
-                        {
-                            Adresses[0] = 0x00C7D20C;
-                            Adresses[1] = 0x0000002C;
-                            Adresses[2] = 0x00001420;
-                            DX = 00000160;
-                            DY = 00000164;
-                            DZ = 00000168;
-                            PX = 0x00000180;
-                            PY = 0x00000184;
-                            PZ = 0x00000188;
-                            break;
-                        }
-                    case 7:
-                        {
-                            Adresses[0] = 0x00DA433C;
-                            Adresses[1] = 0x0000001C;
-                            Adresses[2] = 0x00000028;
-                            DX = 0x0000006C;
-                            DY = 0x00000070;
-                            DZ = 0x00000074;
-                            PX = 0x0000003C;
-                            PY = 0x00000040;
-                            PZ = 0x00000044;
-                            break;
-                        }
-                }
-                for (int h = 0; h < Adresses.Length; h++)
-                {
-                    ReadProcessMemory((IntPtr)Process_name, ((IntPtr)(BaseOffset + Adresses[h])), size, 4, 0);
-                    BaseOffset = BitConverter.ToInt32(size, 0);
-                }
-                ReadProcessMemory((IntPtr)Process_name, ((IntPtr)(BaseOffset + PX)), size, 4, 0);
-                float PosX = BitConverter.ToSingle(size, 0);
-                ReadProcessMemory((IntPtr)Process_name, ((IntPtr)(BaseOffset + PY)), size, 4, 0);
-                float PosY = BitConverter.ToSingle(size, 0);
-                ReadProcessMemory((IntPtr)Process_name, ((IntPtr)(BaseOffset + PZ)), size, 4, 0);
-                float PosZ = BitConverter.ToSingle(size, 0);
-                ReadProcessMemory((IntPtr)Process_name, ((IntPtr)(BaseOffset + DX)), size, 4, 0);
-                float DirX = BitConverter.ToSingle(size, 0);
-                ReadProcessMemory((IntPtr)Process_name, ((IntPtr)(BaseOffset + DY)), size, 4, 0);
-                float DirY = BitConverter.ToSingle(size, 0);
-                ReadProcessMemory((IntPtr)Process_name, ((IntPtr)(BaseOffset + DZ)), size, 4, 0);
-                float DirZ = BitConverter.ToSingle(size, 0);
-                return new ClassPosition(PosX, PosY, PosZ, DirX, DirY, DirZ);
+                int num2 = num + offsets2.baseChain[i];
+                num = vAMemory.ReadInt32((IntPtr)num2);
             }
+            float num3 = vAMemory.ReadFloat((IntPtr)num + offsets2.posX);
+            float num4 = vAMemory.ReadFloat((IntPtr)num + offsets2.posY);
+            float z = vAMemory.ReadFloat((IntPtr)num + offsets2.posZ);
+            float dX = vAMemory.ReadFloat((IntPtr)num + offsets2.dirX);
+            float dY = vAMemory.ReadFloat((IntPtr)num + offsets2.dirY);
+            float dZ = vAMemory.ReadFloat((IntPtr)num + offsets2.dirZ);
+            return new ClassPosition(num3, num4, z, dX, dY, dZ);
         }
         List<PointF> GetPoint(int Action)
         {
-            List<PointF> ls = new List<PointF>();
-            if (Action == 1)
+            List<PointF> list = new List<PointF>();
+            switch (Action)
             {
-                foreach (var item in NpcRowCollection)
-                {
-                    ls.Add(new PointF(Read.NpcMobList[item].X_position, Read.NpcMobList[item].Z_position));
-                }
+                case 1:
+                    foreach (int item in NpcRowCollection)
+                    {
+                        list.Add(new PointF(Read.NpcMobList[item].X_position, Read.NpcMobList[item].Z_position));
+                    }
+                    break;
+                case 2:
+                    foreach (int item2 in ResourcesRowCollection)
+                    {
+                        list.Add(new PointF(Read.ResourcesList[item2].X_position, Read.ResourcesList[item2].Z_position));
+                    }
+                    break;
+                case 3:
+                    foreach (int item3 in DynamicsRowCollection)
+                    {
+                        list.Add(new PointF(Read.DynamicsList[item3].X_position, Read.DynamicsList[item3].Z_position));
+                    }
+                    break;
             }
-            else if (Action == 2)
-            {
-                foreach (var item in ResourcesRowCollection)
-                {
-                    ls.Add(new PointF(Read.ResourcesList[item].X_position, Read.ResourcesList[item].Z_position));
-                }
-            }
-            else if (Action == 3)
-            {
-                foreach (var item in DynamicsRowCollection)
-                {
-                    ls.Add(new PointF(Read.DynamicsList[item].X_position, Read.DynamicsList[item].Z_position));
-                }
-            }
-            return ls;
+            return list;
         }
         void LinkMaps(List<FileTable> l, string MapName)
         {
@@ -405,12 +277,12 @@ namespace NpcGenDataEditorByLuka
                     MapProgress.Value = 0;
                     if (MapForm == null)
                     {
-                        MapForm = new ShowLocationWindow(this, bm);
+                        MapForm = new TesteMapa(this, bm);
                         MapForm.Show(this);
                     }
                     else if (MapForm.Visible == false)
                     {
-                        MapForm = new ShowLocationWindow(this, bm);
+                        MapForm = new TesteMapa(this, bm);
                         MapForm.Show(this);
                     }
                     else
@@ -523,24 +395,16 @@ namespace NpcGenDataEditorByLuka
             if (File.Exists(Npcgen_textbox.Text) && File.Exists(Elements_textbox.Text))
             {
                 Read = new NpcGen();
-                BinaryReader br = new BinaryReader(File.Open(Npcgen_textbox.Text, FileMode.Open));
-                Read.ReadNpcgen(br);
-                br.Close();
-                Element = new Elementsdata(new BinaryReader(File.Open(Elements_textbox.Text, FileMode.Open)));
-                if (Element.Version == -10)
-                {
-                    if (Language == 1)
-                        MessageBox.Show("Версия elements.data не поддерживается!!...", "Npcgen Editor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else if (Language == 2)
-                        MessageBox.Show("Unsupported elements.data version!!...", "Npcgen Editor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                this.Text = Npcgen_textbox.Text + "  -  Version " + Read.File_version.ToString() + "  -  " + "Npcgen Editor By Luka v1.5";
+                BinaryReader binaryReader = new BinaryReader(File.Open(Npcgen_textbox.Text, FileMode.Open));
+                Read.ReadNpcgen(binaryReader);
+                binaryReader.Close();
+                Element = new Elementsdata(Elements_textbox.Text);
+                Text = Npcgen_textbox.Text + "  -  Version " + Read.File_version + "  -  Npcgen Editor By Luka v1.5";
                 NpcMobsGrid.ScrollBars = ScrollBars.None;
                 ResourcesGrid.ScrollBars = ScrollBars.None;
                 DynamicGrid.ScrollBars = ScrollBars.None;
                 TriggersGrid.ScrollBars = ScrollBars.None;
-                new Thread(delegate ()
+                new Thread((ThreadStart)delegate
                 {
                     ChooseFromElementsForm = new MobsNpcsForm(this, Element.ExistenceLists, Element.ResourcesList, Element.MonsterdAmount, Element.NpcsAmount);
                     ChooseFromElementsForm.RefreshLanguage(Language);
@@ -560,44 +424,48 @@ namespace NpcGenDataEditorByLuka
                 TriggersGrid.ScrollBars = ScrollBars.Vertical;
                 if (Language == 1)
                 {
-                    ExistenceTab.Text = string.Format("Мобы и Нипы" + " 1/{0}", Read.NpcMobsAmount);
-                    ResourcesTab.Text = string.Format("Ресурсы" + " 1/{0}", Read.ResourcesAmount);
-                    DynObjectsTab.Text = string.Format("Динамические Объекты" + " 1/{0}", Read.DynobjectAmount);
-                    TriggersTab.Text = string.Format("Тригеры" + " 1/{0}", Read.TriggersAmount);
+                    ExistenceTab.Text = $"Мобы и Нипы 1/{Read.NpcMobsAmount}";
+                    ResourcesTab.Text = $"Ресурсы 1/{Read.ResourcesAmount}";
+                    DynObjectsTab.Text = $"Динамические Объекты 1/{Read.DynobjectAmount}";
+                    TriggersTab.Text = $"Тригеры 1/{Read.TriggersAmount}";
                 }
                 else
                 {
-                    ExistenceTab.Text = string.Format("Mobs and Npcs" + " 1/{0}", Read.NpcMobsAmount);
-                    ResourcesTab.Text = string.Format("Resources" + " 1/{0}", Read.ResourcesAmount);
-                    DynObjectsTab.Text = string.Format("Dynamic Objects" + " 1/{0}", Read.DynobjectAmount);
-                    TriggersTab.Text = string.Format("Triggers" + " 1/{0}", Read.TriggersAmount);
+                    ExistenceTab.Text = $"Mobs and Npcs 1/{Read.NpcMobsAmount}";
+                    ResourcesTab.Text = $"Resources 1/{Read.ResourcesAmount}";
+                    DynObjectsTab.Text = $"Dynamic Objects 1/{Read.DynobjectAmount}";
+                    TriggersTab.Text = $"Triggers 1/{Read.TriggersAmount}";
                 }
                 if (Read.File_version <= 6)
                 {
                     if (Language == 1)
-                        MessageBox.Show("Обратите внимание,в этой версии триггеры не были доступны,но их можно редактировать для конвертирования в другую версию!!...", "Npcgen Editor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    {
+                        MessageBox.Show("Обратите внимание,в этой версии триггеры не были доступны,но их можно редактировать для конвертирования в другую версию!!...", "Npcgen Editor", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
                     else if (Language == 2)
-                        MessageBox.Show("Make attention,triggers didn't exist in this file version,but you can edit them for converting to another version!!...", "Npcgen Editor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    {
+                        MessageBox.Show("Make attention,triggers didn't exist in this file version,but you can edit them for converting to another version!!...", "Npcgen Editor", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
                 }
-                string CheckOnErrors = "Проверить файл на ошибки?";
+                string text = "Проверить файл на ошибки?";
                 if (Language == 2)
                 {
-                    CheckOnErrors = "Do you want to check file on errors?";
+                    text = "Do you want to check file on errors?";
                 }
-                DialogResult dg = MessageBox.Show(CheckOnErrors, "Npcgen Editor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dg == DialogResult.Yes)
+                DialogResult dialogResult = MessageBox.Show(text, "Npcgen Editor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
                 {
                     SearchErrorsButton_Click(null, null);
                     MainTabControl.SelectedIndex = 5;
                 }
-
             }
-            else
+            else if (Language == 1)
             {
-                if (Language == 1)
-                    MessageBox.Show("Файл не существует!!...", "Npcgen Editor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else if (Language == 2)
-                    MessageBox.Show("File doesn't exist!!...", "Npcgen Editor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Файл не существует!!...", "Npcgen Editor", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else if (Language == 2)
+            {
+                MessageBox.Show("File doesn't exist!!...", "Npcgen Editor", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
         public void SortTriggers()
@@ -5316,6 +5184,11 @@ namespace NpcGenDataEditorByLuka
                     NpcMobsGrid.CurrentCell = NpcMobsGrid.Rows[NpcMobsGrid.Rows.Count-1].Cells[1];
                 }
             }
+        }
+
+        private void MapProgress_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

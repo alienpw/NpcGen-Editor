@@ -2,11 +2,11 @@
 <root ProductName='NpcGen Editor By Luka'>
 	<Settings>
 		<Version>1.5</Version>
-		<Language>1</Language>
+		<Language>2</Language>
 		<Interface_Color>1</Interface_Color>
-		<ElementPath>D:\element\data\elements.data</ElementPath>
-		<NpcgenPath>C:\Users\Desktop\npcgen.data</NpcgenPath>
-		<SurfacesPath>D:\Perfect World\element\surfaces.pck</SurfacesPath>
+		<ElementPath>D:\Perfect World\Perfect World Missing - Full Client\Perfect World Missing\element\data - Copia\elements.data</ElementPath>
+		<NpcgenPath>E:\PWSERVER\gamed\config\a32\npcgen.data</NpcgenPath>
+		<SurfacesPath>D:\Perfect World\Perfect World 1.5.2 BR\element\surfaces.pck</SurfacesPath>
 		<ClientVersion>7</ClientVersion>
 		<MobsOrNpcsHotKey>0+0</MobsOrNpcsHotKey>
 		<ResourcesHotKey>0+0</ResourcesHotKey>

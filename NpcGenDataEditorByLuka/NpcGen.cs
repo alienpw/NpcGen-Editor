@@ -121,14 +121,23 @@ namespace NpcGenDataEditorByLuka
     class NpcGen
     {
         public int File_version;
+
         public int NpcMobsAmount;
+
         public int ResourcesAmount;
+
         public int DynobjectAmount;
+
         public int TriggersAmount;
+
         public List<ClassDefaultMonsters> NpcMobList = new List<ClassDefaultMonsters>();
+
         public List<ClassDefaultResources> ResourcesList = new List<ClassDefaultResources>();
+
         public List<ClassDynamicObject> DynamicsList = new List<ClassDynamicObject>();
+
         public List<ClassTrigger> TriggersList = new List<ClassTrigger>();
+
         public void ReadNpcgen(BinaryReader br)
         {
             File_version = br.ReadInt32();
@@ -141,27 +150,25 @@ namespace NpcGenDataEditorByLuka
             }
             for (int i = 0; i < NpcMobsAmount; i++)
             {
-                
-                NpcMobList.Add(ReadExistence(br,File_version));
+                NpcMobList.Add(ReadExistence(br, File_version));
             }
-            for (int i = 0;i<ResourcesAmount;i++)
+            for (int j = 0; j < ResourcesAmount; j++)
             {
-                ResourcesList.Add(ReadResource(br,File_version));
+                ResourcesList.Add(ReadResource(br, File_version));
             }
-            for (int i = 0;i<DynobjectAmount;i++)
+            for (int k = 0; k < DynobjectAmount; k++)
             {
-              
-                DynamicsList.Add(ReadDynObjects(br,File_version));
+                DynamicsList.Add(ReadDynObjects(br, File_version));
             }
             if (File_version > 6)
             {
-                for (int i = 0; i < TriggersAmount; i++)
+                for (int l = 0; l < TriggersAmount; l++)
                 {
-                    
-                    TriggersList.Add(ReadTrigger(br,File_version));
+                    TriggersList.Add(ReadTrigger(br, File_version));
                 }
             }
         }
+
         public void WriteNpcgen(BinaryWriter bw, int Version)
         {
             bw.Write(Version);
@@ -176,207 +183,222 @@ namespace NpcGenDataEditorByLuka
             {
                 WriteExistence(bw, Version, i);
             }
-            for (int i = 0; i < ResourcesAmount; i++)
+            for (int j = 0; j < ResourcesAmount; j++)
             {
-                WriteResource(bw, Version, i);
+                WriteResource(bw, Version, j);
             }
-            for (int i = 0; i < DynobjectAmount; i++)
+            for (int k = 0; k < DynobjectAmount; k++)
             {
-                WriteDynamic(bw, Version, i);
+                WriteDynamic(bw, Version, k);
             }
             if (Version > 6)
             {
-                #region Triggers
-                for (int i = 0; i < TriggersAmount; i++)
+                for (int l = 0; l < TriggersAmount; l++)
                 {
-                    WriteTrigger(bw, Version, i);
+                    WriteTrigger(bw, Version, l);
                 }
-                #endregion
             }
         }
-        public void ExportExistence(string Path,List<int> SelectedExistence)
+
+        public void ExportExistence(string Path, List<int> SelectedExistence)
         {
-            BinaryWriter bw = new BinaryWriter(File.Create(Path));
-            bw.Write("Npcgen Editor by Luka||Existence");
-            bw.Write(SelectedExistence.Count);
-            foreach (var i in SelectedExistence)
+            BinaryWriter binaryWriter = new BinaryWriter(File.Create(Path));
+            binaryWriter.Write("Npcgen Editor by Luka||Existence");
+            binaryWriter.Write(SelectedExistence.Count);
+            foreach (int item in SelectedExistence)
             {
-                WriteExistence(bw, 15, i);
+                WriteExistence(binaryWriter, 15, item);
             }
-            bw.Close();
+            binaryWriter.Close();
         }
-        public void ExportResource(string Path,List<int> SelectedResources)
+
+        public void ExportResource(string Path, List<int> SelectedResources)
         {
-            BinaryWriter bw = new BinaryWriter(File.Create(Path));
-            bw.Write("Npcgen Editor by Luka||Resources");
-            bw.Write(SelectedResources.Count);
-            foreach (var i in SelectedResources)
+            BinaryWriter binaryWriter = new BinaryWriter(File.Create(Path));
+            binaryWriter.Write("Npcgen Editor by Luka||Resources");
+            binaryWriter.Write(SelectedResources.Count);
+            foreach (int SelectedResource in SelectedResources)
             {
-                WriteResource(bw, 15, i);
+                WriteResource(binaryWriter, 15, SelectedResource);
             }
-            bw.Close();
+            binaryWriter.Close();
         }
-        public void ExportDynamics(string Path,List<int> SelectedDynamics)
+
+        public void ExportDynamics(string Path, List<int> SelectedDynamics)
         {
-            BinaryWriter bw = new BinaryWriter(File.Create(Path));
-            bw.Write("Npcgen Editor by Luka||DynObject");
-            bw.Write(SelectedDynamics.Count);
-            foreach (var i in SelectedDynamics)
+            BinaryWriter binaryWriter = new BinaryWriter(File.Create(Path));
+            binaryWriter.Write("Npcgen Editor by Luka||DynObject");
+            binaryWriter.Write(SelectedDynamics.Count);
+            foreach (int SelectedDynamic in SelectedDynamics)
             {
-                WriteDynamic(bw, 15, i);
+                WriteDynamic(binaryWriter, 15, SelectedDynamic);
             }
-            bw.Close();
+            binaryWriter.Close();
         }
-        public void ExportTriggers(string Path,List<int> SelectedTriggers)
+
+        public void ExportTriggers(string Path, List<int> SelectedTriggers)
         {
-            BinaryWriter bw = new BinaryWriter(File.Create(Path));
-            bw.Write("Npcgen Editor by Luka||Triggerss");
-            bw.Write(SelectedTriggers.Count);
-            foreach (var i in SelectedTriggers)
+            BinaryWriter binaryWriter = new BinaryWriter(File.Create(Path));
+            binaryWriter.Write("Npcgen Editor by Luka||Triggerss");
+            binaryWriter.Write(SelectedTriggers.Count);
+            foreach (int SelectedTrigger in SelectedTriggers)
             {
-                WriteTrigger(bw, 15, i);
+                WriteTrigger(binaryWriter, 15, SelectedTrigger);
             }
-            bw.Close();
+            binaryWriter.Close();
         }
-        public ClassDefaultMonsters ReadExistence(BinaryReader br,int Version)
+
+        public ClassDefaultMonsters ReadExistence(BinaryReader br, int Version)
         {
-            ClassDefaultMonsters mn = new ClassDefaultMonsters();
-            mn.Location = br.ReadInt32();
-            mn.Amount_in_group = br.ReadInt32();
-            mn.X_position = br.ReadSingle();
-            mn.Y_position = br.ReadSingle();
-            mn.Z_position = br.ReadSingle();
-            mn.X_direction = br.ReadSingle();
-            mn.Y_direction = br.ReadSingle();
-            mn.Z_direction = br.ReadSingle();
-            mn.X_random = br.ReadSingle();
-            mn.Y_random = br.ReadSingle();
-            mn.Z_random = br.ReadSingle();
-            mn.Type = br.ReadInt32();
-            mn.iGroupType = br.ReadInt32();
-            mn.BInitGen = br.ReadByte();
-            mn.bAutoRevive = br.ReadByte();
-            mn.BValicOnce = br.ReadByte();
-            mn.dwGenId = br.ReadInt32();
+            ClassDefaultMonsters classDefaultMonsters = new ClassDefaultMonsters();
+            classDefaultMonsters.Location = br.ReadInt32();
+            classDefaultMonsters.Amount_in_group = br.ReadInt32();
+            classDefaultMonsters.X_position = br.ReadSingle();
+            classDefaultMonsters.Y_position = br.ReadSingle();
+            classDefaultMonsters.Z_position = br.ReadSingle();
+            classDefaultMonsters.X_direction = br.ReadSingle();
+            classDefaultMonsters.Y_direction = br.ReadSingle();
+            classDefaultMonsters.Z_direction = br.ReadSingle();
+            classDefaultMonsters.X_random = br.ReadSingle();
+            classDefaultMonsters.Y_random = br.ReadSingle();
+            classDefaultMonsters.Z_random = br.ReadSingle();
+            classDefaultMonsters.Type = br.ReadInt32();
+            classDefaultMonsters.iGroupType = br.ReadInt32();
+            classDefaultMonsters.BInitGen = br.ReadByte();
+            classDefaultMonsters.bAutoRevive = br.ReadByte();
+            classDefaultMonsters.BValicOnce = br.ReadByte();
+            classDefaultMonsters.dwGenId = br.ReadInt32();
             if (Version > 6)
             {
-                mn.Trigger_id = br.ReadInt32();
-                mn.Life_time = br.ReadInt32();
-                mn.MaxRespawnTime = br.ReadInt32();
+                classDefaultMonsters.Trigger_id = br.ReadInt32();
+                classDefaultMonsters.Life_time = br.ReadInt32();
+                classDefaultMonsters.MaxRespawnTime = br.ReadInt32();
             }
-            mn.MobDops = new List<ClassExtraMonsters>(mn.Amount_in_group);
-            for (int z = 0; z < mn.Amount_in_group; z++)
+            classDefaultMonsters.MobDops = new List<ClassExtraMonsters>(classDefaultMonsters.Amount_in_group);
+            for (int i = 0; i < classDefaultMonsters.Amount_in_group; i++)
             {
-                ClassExtraMonsters mne = new ClassExtraMonsters();
-                mne.Id = br.ReadInt32();
-                mne.Amount = br.ReadInt32();
-                mne.Respawn = br.ReadInt32();
-                mne.Dead_amount = br.ReadInt32();
-                mne.Agression = br.ReadInt32();
-                mne.fOffsetWater = br.ReadSingle();
-                mne.fOffsetTrn = br.ReadSingle();
-                mne.Group = br.ReadInt32();
-                mne.Group_help_sender = br.ReadInt32();
-                mne.Group_help_Needer = br.ReadInt32();
-                mne.bNeedHelp = br.ReadByte();
-                mne.bFaction = br.ReadByte();
-                mne.bFac_Helper = br.ReadByte();
-                mne.bFac_Accept = br.ReadByte();
-                mne.Path = br.ReadInt32();
-                mne.Path_type = br.ReadInt32();
-                mne.Speed = br.ReadInt32();
-                mne.Dead_time = br.ReadInt32();
+                ClassExtraMonsters classExtraMonsters = new ClassExtraMonsters();
+                classExtraMonsters.Id = br.ReadInt32();
+                classExtraMonsters.Amount = br.ReadInt32();
+                classExtraMonsters.Respawn = br.ReadInt32();
+                classExtraMonsters.Dead_amount = br.ReadInt32();
+                classExtraMonsters.Agression = br.ReadInt32();
+                classExtraMonsters.fOffsetWater = br.ReadSingle();
+                classExtraMonsters.fOffsetTrn = br.ReadSingle();
+                classExtraMonsters.Group = br.ReadInt32();
+                classExtraMonsters.Group_help_sender = br.ReadInt32();
+                classExtraMonsters.Group_help_Needer = br.ReadInt32();
+                classExtraMonsters.bNeedHelp = br.ReadByte();
+                classExtraMonsters.bFaction = br.ReadByte();
+                classExtraMonsters.bFac_Helper = br.ReadByte();
+                classExtraMonsters.bFac_Accept = br.ReadByte();
+                classExtraMonsters.Path = br.ReadInt32();
+                classExtraMonsters.Path_type = br.ReadInt32();
+                classExtraMonsters.Speed = br.ReadInt32();
+                classExtraMonsters.Dead_time = br.ReadInt32();
                 if (Version >= 11)
                 {
-                    mne.RefreshLower = br.ReadInt32();
+                    classExtraMonsters.RefreshLower = br.ReadInt32();
                 }
-                mn.MobDops.Add(mne);
+                classDefaultMonsters.MobDops.Add(classExtraMonsters);
             }
-            return mn;
+            return classDefaultMonsters;
         }
-        public ClassDefaultResources ReadResource(BinaryReader br,int Version)
+
+        public ClassDefaultResources ReadResource(BinaryReader br, int Version)
         {
-            ClassDefaultResources rs = new ClassDefaultResources();
-            rs.X_position = br.ReadSingle();
-            rs.Y_position = br.ReadSingle();
-            rs.Z_position = br.ReadSingle();
-            rs.X_Random = br.ReadSingle();
-            rs.Z_Random = br.ReadSingle();
-            rs.Amount_in_group = br.ReadInt32();
-            rs.bInitGen = br.ReadByte();
-            rs.bAutoRevive = br.ReadByte();
-            rs.bValidOnce = br.ReadByte();
-            rs.dwGenID = br.ReadInt32();
-            rs.InCline1 = br.ReadByte();
-            rs.InCline2 = br.ReadByte();
-            rs.Rotation = br.ReadByte();
-            rs.Trigger_id = br.ReadInt32();
-            rs.IMaxNum = br.ReadInt32();
-            rs.ResExtra = new List<ClassExtraResources>();
-            for (int j = 0; j < rs.Amount_in_group; j++)
+            ClassDefaultResources classDefaultResources = new ClassDefaultResources();
+            classDefaultResources.X_position = br.ReadSingle();
+            classDefaultResources.Y_position = br.ReadSingle();
+            classDefaultResources.Z_position = br.ReadSingle();
+            classDefaultResources.X_Random = br.ReadSingle();
+            classDefaultResources.Z_Random = br.ReadSingle();
+            classDefaultResources.Amount_in_group = br.ReadInt32();
+            classDefaultResources.bInitGen = br.ReadByte();
+            classDefaultResources.bAutoRevive = br.ReadByte();
+            classDefaultResources.bValidOnce = br.ReadByte();
+            classDefaultResources.dwGenID = br.ReadInt32();
+            classDefaultResources.InCline1 = br.ReadByte();
+            classDefaultResources.InCline2 = br.ReadByte();
+            classDefaultResources.Rotation = br.ReadByte();
+            classDefaultResources.Trigger_id = br.ReadInt32();
+            classDefaultResources.IMaxNum = br.ReadInt32();
+            classDefaultResources.ResExtra = new List<ClassExtraResources>();
+            for (int i = 0; i < classDefaultResources.Amount_in_group; i++)
             {
-                ClassExtraResources drs = new ClassExtraResources();
-                drs.ResourceType = br.ReadInt32();
-                drs.Id = br.ReadInt32();
-                drs.Respawntime = br.ReadInt32();
-                drs.Amount = br.ReadInt32();
-                drs.fHeiOff = br.ReadSingle();
-                rs.ResExtra.Add(drs);
+                ClassExtraResources classExtraResources = new ClassExtraResources();
+                classExtraResources.ResourceType = br.ReadInt32();
+                classExtraResources.Id = br.ReadInt32();
+                classExtraResources.Respawntime = br.ReadInt32();
+                classExtraResources.Amount = br.ReadInt32();
+                classExtraResources.fHeiOff = br.ReadSingle();
+                classDefaultResources.ResExtra.Add(classExtraResources);
             }
-            return rs;
+            return classDefaultResources;
         }
-        public ClassDynamicObject ReadDynObjects(BinaryReader br,int Version)
+
+        public ClassDynamicObject ReadDynObjects(BinaryReader br, int Version)
         {
-            ClassDynamicObject ddo = new ClassDynamicObject();
-            ddo.Id = br.ReadInt32();
-            ddo.X_position = br.ReadSingle();
-            ddo.Y_position = br.ReadSingle();
-            ddo.Z_position = br.ReadSingle();
-            ddo.InCline1 = br.ReadByte();
-            ddo.InCline2 = br.ReadByte();
-            ddo.Rotation = br.ReadByte();
-            ddo.TriggerId = br.ReadInt32();
-            ddo.Scale = br.ReadByte();
-            return ddo;
+            ClassDynamicObject classDynamicObject = new ClassDynamicObject();
+            classDynamicObject.Id = br.ReadInt32();
+            classDynamicObject.X_position = br.ReadSingle();
+            classDynamicObject.Y_position = br.ReadSingle();
+            classDynamicObject.Z_position = br.ReadSingle();
+            classDynamicObject.InCline1 = br.ReadByte();
+            classDynamicObject.InCline2 = br.ReadByte();
+            classDynamicObject.Rotation = br.ReadByte();
+            classDynamicObject.TriggerId = br.ReadInt32();
+            classDynamicObject.Scale = br.ReadByte();
+            return classDynamicObject;
         }
-        public ClassTrigger ReadTrigger(BinaryReader br,int Version)
+
+        public ClassTrigger ReadTrigger(BinaryReader br, int Version)
         {
-            ClassTrigger ct = new ClassTrigger();
-            ct.Id = br.ReadInt32();
-            ct.GmID = br.ReadInt32();
-            ct.TriggerName = Encoding.GetEncoding(936).GetString(br.ReadBytes(128)).TrimEnd('\0');
-            ct.AutoStart = br.ReadByte();
-            ct.WaitWhileStart = br.ReadInt32();
-            ct.WaitWhileStop = br.ReadInt32();
-            ct.DontStartOnSchedule = br.ReadByte();
-            if (ct.DontStartOnSchedule == 0)
-                ct.DontStartOnSchedule = 1;
-            else if (ct.DontStartOnSchedule == 1)
-                ct.DontStartOnSchedule = 0;
-            ct.DontStopOnSchedule = br.ReadByte();
-            if (ct.DontStopOnSchedule == 1)
-                ct.DontStopOnSchedule = 0;
-            else if (ct.DontStopOnSchedule == 0)
-                ct.DontStopOnSchedule = 1;
-            ct.StartYear = br.ReadInt32();
-            ct.StartMonth = br.ReadInt32();
-            ct.StartWeekDay = br.ReadInt32();
-            ct.StartDay = br.ReadInt32();
-            ct.StartHour = br.ReadInt32();
-            ct.StartMinute = br.ReadInt32();
-            ct.StopYear = br.ReadInt32();
-            ct.StopMonth = br.ReadInt32();
-            ct.StopWeekDay = br.ReadInt32();
-            ct.StopDay = br.ReadInt32();
-            ct.StopHour = br.ReadInt32();
-            ct.StopMinute = br.ReadInt32();
+            ClassTrigger classTrigger = new ClassTrigger();
+            classTrigger.Id = br.ReadInt32();
+            classTrigger.GmID = br.ReadInt32();
+            classTrigger.TriggerName = Encoding.GetEncoding(936).GetString(br.ReadBytes(128)).TrimEnd(default(char));
+            classTrigger.AutoStart = br.ReadByte();
+            classTrigger.WaitWhileStart = br.ReadInt32();
+            classTrigger.WaitWhileStop = br.ReadInt32();
+            classTrigger.DontStartOnSchedule = br.ReadByte();
+            if (classTrigger.DontStartOnSchedule == 0)
+            {
+                classTrigger.DontStartOnSchedule = 1;
+            }
+            else if (classTrigger.DontStartOnSchedule == 1)
+            {
+                classTrigger.DontStartOnSchedule = 0;
+            }
+            classTrigger.DontStopOnSchedule = br.ReadByte();
+            if (classTrigger.DontStopOnSchedule == 1)
+            {
+                classTrigger.DontStopOnSchedule = 0;
+            }
+            else if (classTrigger.DontStopOnSchedule == 0)
+            {
+                classTrigger.DontStopOnSchedule = 1;
+            }
+            classTrigger.StartYear = br.ReadInt32();
+            classTrigger.StartMonth = br.ReadInt32();
+            classTrigger.StartWeekDay = br.ReadInt32();
+            classTrigger.StartDay = br.ReadInt32();
+            classTrigger.StartHour = br.ReadInt32();
+            classTrigger.StartMinute = br.ReadInt32();
+            classTrigger.StopYear = br.ReadInt32();
+            classTrigger.StopMonth = br.ReadInt32();
+            classTrigger.StopWeekDay = br.ReadInt32();
+            classTrigger.StopDay = br.ReadInt32();
+            classTrigger.StopHour = br.ReadInt32();
+            classTrigger.StopMinute = br.ReadInt32();
             if (File_version > 7)
             {
-                ct.Duration = br.ReadInt32();
+                classTrigger.Duration = br.ReadInt32();
             }
-            return ct;
+            return classTrigger;
         }
-        public void WriteExistence(BinaryWriter bw,int Version,int i )
+
+        public void WriteExistence(BinaryWriter bw, int Version, int i)
         {
             bw.Write(NpcMobList[i].Location);
             bw.Write(NpcMobList[i].Amount_in_group);
@@ -401,33 +423,34 @@ namespace NpcGenDataEditorByLuka
                 bw.Write(NpcMobList[i].Life_time);
                 bw.Write(NpcMobList[i].MaxRespawnTime);
             }
-            for (int k = 0; k < NpcMobList[i].Amount_in_group; k++)
+            for (int j = 0; j < NpcMobList[i].Amount_in_group; j++)
             {
-                bw.Write(NpcMobList[i].MobDops[k].Id);
-                bw.Write(NpcMobList[i].MobDops[k].Amount);
-                bw.Write(NpcMobList[i].MobDops[k].Respawn);
-                bw.Write(NpcMobList[i].MobDops[k].Dead_amount);
-                bw.Write(NpcMobList[i].MobDops[k].Agression);
-                bw.Write(NpcMobList[i].MobDops[k].fOffsetWater);
-                bw.Write(NpcMobList[i].MobDops[k].fOffsetTrn);
-                bw.Write(NpcMobList[i].MobDops[k].Group);
-                bw.Write(NpcMobList[i].MobDops[k].Group_help_sender);
-                bw.Write(NpcMobList[i].MobDops[k].Group_help_Needer);
-                bw.Write(NpcMobList[i].MobDops[k].bNeedHelp);
-                bw.Write(NpcMobList[i].MobDops[k].bFaction);
-                bw.Write(NpcMobList[i].MobDops[k].bFac_Helper);
-                bw.Write(NpcMobList[i].MobDops[k].bFac_Accept);
-                bw.Write(NpcMobList[i].MobDops[k].Path);
-                bw.Write(NpcMobList[i].MobDops[k].Path_type);
-                bw.Write(NpcMobList[i].MobDops[k].Speed);
-                bw.Write(NpcMobList[i].MobDops[k].Dead_time);
+                bw.Write(NpcMobList[i].MobDops[j].Id);
+                bw.Write(NpcMobList[i].MobDops[j].Amount);
+                bw.Write(NpcMobList[i].MobDops[j].Respawn);
+                bw.Write(NpcMobList[i].MobDops[j].Dead_amount);
+                bw.Write(NpcMobList[i].MobDops[j].Agression);
+                bw.Write(NpcMobList[i].MobDops[j].fOffsetWater);
+                bw.Write(NpcMobList[i].MobDops[j].fOffsetTrn);
+                bw.Write(NpcMobList[i].MobDops[j].Group);
+                bw.Write(NpcMobList[i].MobDops[j].Group_help_sender);
+                bw.Write(NpcMobList[i].MobDops[j].Group_help_Needer);
+                bw.Write(NpcMobList[i].MobDops[j].bNeedHelp);
+                bw.Write(NpcMobList[i].MobDops[j].bFaction);
+                bw.Write(NpcMobList[i].MobDops[j].bFac_Helper);
+                bw.Write(NpcMobList[i].MobDops[j].bFac_Accept);
+                bw.Write(NpcMobList[i].MobDops[j].Path);
+                bw.Write(NpcMobList[i].MobDops[j].Path_type);
+                bw.Write(NpcMobList[i].MobDops[j].Speed);
+                bw.Write(NpcMobList[i].MobDops[j].Dead_time);
                 if (Version >= 11)
                 {
-                    bw.Write(NpcMobList[i].MobDops[k].RefreshLower);
+                    bw.Write(NpcMobList[i].MobDops[j].RefreshLower);
                 }
             }
         }
-        public void WriteResource(BinaryWriter bw,int Version,int i )
+
+        public void WriteResource(BinaryWriter bw, int Version, int i)
         {
             bw.Write(ResourcesList[i].X_position);
             bw.Write(ResourcesList[i].Y_position);
@@ -444,16 +467,17 @@ namespace NpcGenDataEditorByLuka
             bw.Write(ResourcesList[i].Rotation);
             bw.Write(ResourcesList[i].Trigger_id);
             bw.Write(ResourcesList[i].IMaxNum);
-            for (int z = 0; z < ResourcesList[i].Amount_in_group; z++)
+            for (int j = 0; j < ResourcesList[i].Amount_in_group; j++)
             {
-                bw.Write(ResourcesList[i].ResExtra[z].ResourceType);
-                bw.Write(ResourcesList[i].ResExtra[z].Id);
-                bw.Write(ResourcesList[i].ResExtra[z].Respawntime);
-                bw.Write(ResourcesList[i].ResExtra[z].Amount);
-                bw.Write(ResourcesList[i].ResExtra[z].fHeiOff);
+                bw.Write(ResourcesList[i].ResExtra[j].ResourceType);
+                bw.Write(ResourcesList[i].ResExtra[j].Id);
+                bw.Write(ResourcesList[i].ResExtra[j].Respawntime);
+                bw.Write(ResourcesList[i].ResExtra[j].Amount);
+                bw.Write(ResourcesList[i].ResExtra[j].fHeiOff);
             }
         }
-        public void WriteDynamic(BinaryWriter bw,int Version,int i )
+
+        public void WriteDynamic(BinaryWriter bw, int Version, int i)
         {
             bw.Write(DynamicsList[i].Id);
             bw.Write(DynamicsList[i].X_position);
@@ -465,7 +489,8 @@ namespace NpcGenDataEditorByLuka
             bw.Write(DynamicsList[i].TriggerId);
             bw.Write(DynamicsList[i].Scale);
         }
-        public void WriteTrigger(BinaryWriter bw,int Version,int i )
+
+        public void WriteTrigger(BinaryWriter bw, int Version, int i)
         {
             bw.Write(TriggersList[i].Id);
             bw.Write(TriggersList[i].GmID);
@@ -473,10 +498,22 @@ namespace NpcGenDataEditorByLuka
             bw.Write(TriggersList[i].AutoStart);
             bw.Write(TriggersList[i].WaitWhileStart);
             bw.Write(TriggersList[i].WaitWhileStop);
-            if (TriggersList[i].DontStartOnSchedule == 1) bw.Write((byte)0);
-            else bw.Write((byte)1);
-            if (TriggersList[i].DontStopOnSchedule == 1) bw.Write((byte)0);
-            else bw.Write((byte)1);
+            if (TriggersList[i].DontStartOnSchedule == 1)
+            {
+                bw.Write((byte)0);
+            }
+            else
+            {
+                bw.Write((byte)1);
+            }
+            if (TriggersList[i].DontStopOnSchedule == 1)
+            {
+                bw.Write((byte)0);
+            }
+            else
+            {
+                bw.Write((byte)1);
+            }
             bw.Write(TriggersList[i].StartYear);
             bw.Write(TriggersList[i].StartMonth);
             bw.Write(TriggersList[i].StartWeekDay);
@@ -494,21 +531,23 @@ namespace NpcGenDataEditorByLuka
                 bw.Write(TriggersList[i].Duration);
             }
         }
+
         public byte[] GetBytes(string Name, int NameLength, Encoding e)
         {
-            Name = Name.Split('\0')[0];
-            byte[] data = new byte[NameLength];
+            Name = Name.Split(default(char))[0];
+            byte[] array = new byte[NameLength];
             if (e.GetByteCount(Name) > NameLength)
             {
-                Array.Copy(e.GetBytes(Name), 0, data, 0, NameLength);
+                Array.Copy(e.GetBytes(Name), 0, array, 0, NameLength);
             }
             else
             {
-                Array.Copy(e.GetBytes(Name), data, e.GetByteCount(Name));
+                Array.Copy(e.GetBytes(Name), array, e.GetByteCount(Name));
             }
-            return data;
+            return array;
         }
     }
+
     public class GameMapInfo
     {
         public string MapName;

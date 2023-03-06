@@ -45,6 +45,10 @@ namespace NpcGenDataEditorByLuka
             pictureBox1.Image = bmz;
         }
 
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 
 }

@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -76,6 +75,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.Elements_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -99,9 +99,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExistenceGroupCloneButton = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
-            this.ExistenceGroupRemoveButton = new System.Windows.Forms.Button();
             this.Turn_numeric = new System.Windows.Forms.NumericUpDown();
             this.label30 = new System.Windows.Forms.Label();
             this.Water_numeric = new System.Windows.Forms.NumericUpDown();
@@ -129,15 +127,8 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExistenceContext = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.LineUpX = new System.Windows.Forms.ToolStripMenuItem();
-            this.LineUpZ = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.UpExistence = new System.Windows.Forms.ToolStripMenuItem();
-            this.DownExistence = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.импортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainGroupBox = new System.Windows.Forms.GroupBox();
             this.ExistenceInsertCordsFromGame = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -157,7 +148,6 @@
             this.Life_time = new System.Windows.Forms.TextBox();
             this.Trigger = new System.Windows.Forms.TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.MoveToTrigger = new System.Windows.Forms.ToolStripMenuItem();
             this.label18 = new System.Windows.Forms.Label();
             this.dwGenId = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -192,17 +182,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.ExistenceRemoveButton = new System.Windows.Forms.Button();
-            this.ExistenceCloneButton = new System.Windows.Forms.Button();
             this.ExistenceToolStrip = new System.Windows.Forms.ToolStrip();
-            this.ExportExistence = new System.Windows.Forms.ToolStripButton();
-            this.ImportExistence = new System.Windows.Forms.ToolStripButton();
-            this.LineUpExistenceDropDown = new System.Windows.Forms.ToolStripDropDownButton();
-            this.ToolStripLineUpX = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripLineUpZ = new System.Windows.Forms.ToolStripMenuItem();
-            this.MoveExistenceDropDown = new System.Windows.Forms.ToolStripDropDownButton();
-            this.MoveUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MoveDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ResourcesTab = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.RType_numeric = new System.Windows.Forms.NumericUpDown();
@@ -214,8 +194,6 @@
             this.label59 = new System.Windows.Forms.Label();
             this.RId_numeric = new System.Windows.Forms.NumericUpDown();
             this.label60 = new System.Windows.Forms.Label();
-            this.ResourcesGroupRemoveButton = new System.Windows.Forms.Button();
-            this.ResourcesGroupCloneButton = new System.Windows.Forms.Button();
             this.ResourcesGroupGrid = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -265,19 +243,8 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.ExportResources = new System.Windows.Forms.ToolStripButton();
-            this.ImportResources = new System.Windows.Forms.ToolStripButton();
-            this.LineUpResource = new System.Windows.Forms.ToolStripDropDownButton();
-            this.ResourcesOnX = new System.Windows.Forms.ToolStripMenuItem();
-            this.ResourcesOnZ = new System.Windows.Forms.ToolStripMenuItem();
-            this.MoveResources = new System.Windows.Forms.ToolStripDropDownButton();
-            this.ResourceUp = new System.Windows.Forms.ToolStripMenuItem();
-            this.ResourceDown = new System.Windows.Forms.ToolStripMenuItem();
-            this.ResourcesRemoveButton = new System.Windows.Forms.Button();
-            this.ResourcesCloneButton = new System.Windows.Forms.Button();
             this.DynObjectsTab = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.DynamicPictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.DId_numeric = new System.Windows.Forms.TextBox();
             this.Label_DynamicName = new System.Windows.Forms.Label();
@@ -309,36 +276,23 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DynObjectsRemoveButton = new System.Windows.Forms.Button();
-            this.DynObjectsCloneButton = new System.Windows.Forms.Button();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.TriggersTab = new System.Windows.Forms.TabPage();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.DUTrigger = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GotoDynamicsContacts = new System.Windows.Forms.Button();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.RUTrigger = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GotoResourcesContacts = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.MUTrigger = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GotoNpcMobsContacts = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.TStopMinute = new System.Windows.Forms.TextBox();
@@ -388,22 +342,8 @@
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TriggersContext = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.DeleteEmptyTrigger = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.UpTrigger = new System.Windows.Forms.ToolStripMenuItem();
-            this.DownTrigger = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.TriggersRemoveButton = new System.Windows.Forms.Button();
-            this.TriggersCloneButton = new System.Windows.Forms.Button();
             this.SearchTab = new System.Windows.Forms.TabPage();
             this.SearchGrid = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -411,9 +351,7 @@
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.MoveToSelected = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.TriggerSearchButton = new System.Windows.Forms.Button();
             this.TriggerSearchName = new System.Windows.Forms.TextBox();
             this.TriggerSearchName_Radio = new System.Windows.Forms.RadioButton();
             this.TriggerSearchGmID = new System.Windows.Forms.TextBox();
@@ -423,7 +361,6 @@
             this.label108 = new System.Windows.Forms.Label();
             this.TriggerSearchGmId_Radio = new System.Windows.Forms.RadioButton();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.DynamicSearchButton = new System.Windows.Forms.Button();
             this.DynamicSearchTrigger = new System.Windows.Forms.TextBox();
             this.DynamicSearchTrigger_Radio = new System.Windows.Forms.RadioButton();
             this.DynamicSearchName = new System.Windows.Forms.TextBox();
@@ -433,7 +370,6 @@
             this.label106 = new System.Windows.Forms.Label();
             this.DynamicSearchName_Radio = new System.Windows.Forms.RadioButton();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.ResourceSearchButton = new System.Windows.Forms.Button();
             this.ResourceSearchTrigger = new System.Windows.Forms.TextBox();
             this.ResourceSearchTrigger_Radio = new System.Windows.Forms.RadioButton();
             this.ResourceSearchName = new System.Windows.Forms.TextBox();
@@ -443,7 +379,6 @@
             this.label104 = new System.Windows.Forms.Label();
             this.ResourceSearchName_Radio = new System.Windows.Forms.RadioButton();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.ExistenceSearchButton = new System.Windows.Forms.Button();
             this.ExistenceSearchPath = new System.Windows.Forms.TextBox();
             this.ExistenceSearchPath_Radio = new System.Windows.Forms.RadioButton();
             this.ExistenceSearchTrigger = new System.Windows.Forms.TextBox();
@@ -455,8 +390,6 @@
             this.label76 = new System.Windows.Forms.Label();
             this.ExistenceSearchName_Radio = new System.Windows.Forms.RadioButton();
             this.ErrorsTab = new System.Windows.Forms.TabPage();
-            this.RemoveAllErrors = new System.Windows.Forms.Button();
-            this.SearchErrorsButton = new System.Windows.Forms.Button();
             this.ErrorsGrid = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -464,11 +397,7 @@
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OptionsTab = new System.Windows.Forms.TabPage();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.Clear = new System.Windows.Forms.RadioButton();
-            this.Dark = new System.Windows.Forms.RadioButton();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.Russian = new System.Windows.Forms.RadioButton();
-            this.English = new System.Windows.Forms.RadioButton();
             this.ConvertComboboxVersion = new System.Windows.Forms.ComboBox();
             this.label52 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -485,8 +414,6 @@
             this.DefaultMobButton_combobox = new System.Windows.Forms.ComboBox();
             this.label50 = new System.Windows.Forms.Label();
             this.Version_combobox = new System.Windows.Forms.ComboBox();
-            this.ConvertAndSaveButton = new System.Windows.Forms.Button();
-            this.SaveFile = new System.Windows.Forms.Button();
             this.Maps_combobox = new System.Windows.Forms.ComboBox();
             this.Element_dialog = new System.Windows.Forms.OpenFileDialog();
             this.Npcgen_dialog = new System.Windows.Forms.OpenFileDialog();
@@ -501,12 +428,85 @@
             this.InformationButton = new System.Windows.Forms.Button();
             this.Open_surfaces = new System.Windows.Forms.Button();
             this.Search_surfaces = new System.Windows.Forms.Button();
-            this.OpenFiles = new System.Windows.Forms.Button();
-            this.Search_Npcgen = new System.Windows.Forms.Button();
-            this.Search_element = new System.Windows.Forms.Button();
+            this.ExistenceGroupCloneButton = new System.Windows.Forms.Button();
+            this.ExistenceGroupRemoveButton = new System.Windows.Forms.Button();
+            this.LineUpX = new System.Windows.Forms.ToolStripMenuItem();
+            this.LineUpZ = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpExistence = new System.Windows.Forms.ToolStripMenuItem();
+            this.DownExistence = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.вНачалоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExistenceToEnd = new System.Windows.Forms.ToolStripMenuItem();
+            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.импортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MoveToTrigger = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExistenceRemoveButton = new System.Windows.Forms.Button();
+            this.ExistenceCloneButton = new System.Windows.Forms.Button();
+            this.ExportExistence = new System.Windows.Forms.ToolStripButton();
+            this.ImportExistence = new System.Windows.Forms.ToolStripButton();
+            this.LineUpExistenceDropDown = new System.Windows.Forms.ToolStripDropDownButton();
+            this.ToolStripLineUpX = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripLineUpZ = new System.Windows.Forms.ToolStripMenuItem();
+            this.MoveExistenceDropDown = new System.Windows.Forms.ToolStripDropDownButton();
+            this.MoveUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MoveDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ResourcesGroupRemoveButton = new System.Windows.Forms.Button();
+            this.ResourcesGroupCloneButton = new System.Windows.Forms.Button();
+            this.ExportResources = new System.Windows.Forms.ToolStripButton();
+            this.ImportResources = new System.Windows.Forms.ToolStripButton();
+            this.LineUpResource = new System.Windows.Forms.ToolStripDropDownButton();
+            this.ResourcesOnX = new System.Windows.Forms.ToolStripMenuItem();
+            this.ResourcesOnZ = new System.Windows.Forms.ToolStripMenuItem();
+            this.MoveResources = new System.Windows.Forms.ToolStripDropDownButton();
+            this.ResourceUp = new System.Windows.Forms.ToolStripMenuItem();
+            this.ResourceDown = new System.Windows.Forms.ToolStripMenuItem();
+            this.ResourcesRemoveButton = new System.Windows.Forms.Button();
+            this.ResourcesCloneButton = new System.Windows.Forms.Button();
+            this.DynamicPictureBox = new System.Windows.Forms.PictureBox();
+            this.DynObjectsRemoveButton = new System.Windows.Forms.Button();
+            this.DynObjectsCloneButton = new System.Windows.Forms.Button();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.GotoDynamicsContacts = new System.Windows.Forms.Button();
+            this.GotoResourcesContacts = new System.Windows.Forms.Button();
+            this.GotoNpcMobsContacts = new System.Windows.Forms.Button();
+            this.DeleteEmptyTrigger = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpTrigger = new System.Windows.Forms.ToolStripMenuItem();
+            this.DownTrigger = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.TriggersRemoveButton = new System.Windows.Forms.Button();
+            this.TriggersCloneButton = new System.Windows.Forms.Button();
+            this.MoveToSelected = new System.Windows.Forms.ToolStripMenuItem();
+            this.TriggerSearchButton = new System.Windows.Forms.Button();
+            this.DynamicSearchButton = new System.Windows.Forms.Button();
+            this.ResourceSearchButton = new System.Windows.Forms.Button();
+            this.ExistenceSearchButton = new System.Windows.Forms.Button();
+            this.RemoveAllErrors = new System.Windows.Forms.Button();
+            this.SearchErrorsButton = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.RadioButton();
+            this.Dark = new System.Windows.Forms.RadioButton();
+            this.Russian = new System.Windows.Forms.RadioButton();
+            this.English = new System.Windows.Forms.RadioButton();
+            this.ConvertAndSaveButton = new System.Windows.Forms.Button();
+            this.SaveFile = new System.Windows.Forms.Button();
+            this.OpenFiles = new System.Windows.Forms.Button();
+            this.Search_Npcgen = new System.Windows.Forms.Button();
+            this.Search_element = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.ExistenceTab.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -552,7 +552,6 @@
             this.toolStrip1.SuspendLayout();
             this.DynObjectsTab.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DynamicPictureBox)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddDynamicsTrigger)).BeginInit();
@@ -585,6 +584,7 @@
             this.groupBox23.SuspendLayout();
             this.groupBox22.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DynamicPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -962,21 +962,6 @@
             this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn5.Width = 125;
             // 
-            // ExistenceGroupCloneButton
-            // 
-            this.ExistenceGroupCloneButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ExistenceGroupCloneButton.ForeColor = System.Drawing.Color.Black;
-            this.ExistenceGroupCloneButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Clone;
-            this.ExistenceGroupCloneButton.Location = new System.Drawing.Point(378, 198);
-            this.ExistenceGroupCloneButton.Name = "ExistenceGroupCloneButton";
-            this.ExistenceGroupCloneButton.Size = new System.Drawing.Size(110, 29);
-            this.ExistenceGroupCloneButton.TabIndex = 15;
-            this.ExistenceGroupCloneButton.Text = "Клонировать";
-            this.ExistenceGroupCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ExistenceGroupCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ExistenceGroupCloneButton.UseVisualStyleBackColor = true;
-            this.ExistenceGroupCloneButton.Click += new System.EventHandler(this.CloneNpcinGroupButton_Click);
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -986,21 +971,6 @@
             this.label31.Size = new System.Drawing.Size(102, 15);
             this.label31.TabIndex = 57;
             this.label31.Text = "Просит помощь:";
-            // 
-            // ExistenceGroupRemoveButton
-            // 
-            this.ExistenceGroupRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ExistenceGroupRemoveButton.ForeColor = System.Drawing.Color.Black;
-            this.ExistenceGroupRemoveButton.Image = ((System.Drawing.Image)(resources.GetObject("ExistenceGroupRemoveButton.Image")));
-            this.ExistenceGroupRemoveButton.Location = new System.Drawing.Point(488, 198);
-            this.ExistenceGroupRemoveButton.Name = "ExistenceGroupRemoveButton";
-            this.ExistenceGroupRemoveButton.Size = new System.Drawing.Size(110, 29);
-            this.ExistenceGroupRemoveButton.TabIndex = 16;
-            this.ExistenceGroupRemoveButton.Text = "Удалить";
-            this.ExistenceGroupRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ExistenceGroupRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ExistenceGroupRemoveButton.UseVisualStyleBackColor = true;
-            this.ExistenceGroupRemoveButton.Click += new System.EventHandler(this.DeleteNpcinGroupButton_Click);
             // 
             // Turn_numeric
             // 
@@ -1422,80 +1392,18 @@
             this.экспортToolStripMenuItem,
             this.импортToolStripMenuItem});
             this.ExistenceContext.Name = "TriggersContext";
-            this.ExistenceContext.Size = new System.Drawing.Size(192, 148);
+            this.ExistenceContext.Size = new System.Drawing.Size(192, 126);
             this.ExistenceContext.Text = "Дополнительно";
-            // 
-            // LineUpX
-            // 
-            this.LineUpX.Image = ((System.Drawing.Image)(resources.GetObject("LineUpX.Image")));
-            this.LineUpX.Name = "LineUpX";
-            this.LineUpX.Size = new System.Drawing.Size(191, 22);
-            this.LineUpX.Text = "Выстроить в ряд по X";
-            this.LineUpX.Click += new System.EventHandler(this.LineUpX_Click);
-            // 
-            // LineUpZ
-            // 
-            this.LineUpZ.Image = ((System.Drawing.Image)(resources.GetObject("LineUpZ.Image")));
-            this.LineUpZ.Name = "LineUpZ";
-            this.LineUpZ.Size = new System.Drawing.Size(191, 22);
-            this.LineUpZ.Text = "Выстроить в ряд по Z";
-            this.LineUpZ.Click += new System.EventHandler(this.LineUpZ_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(188, 6);
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.UpExistence,
-            this.DownExistence,
-            this.toolStripSeparator4,
-            this.вНачалоToolStripMenuItem,
-            this.ExistenceToEnd});
-            this.toolStripMenuItem1.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(191, 22);
-            this.toolStripMenuItem1.Text = "Переместить";
-            // 
-            // UpExistence
-            // 
-            this.UpExistence.Image = ((System.Drawing.Image)(resources.GetObject("UpExistence.Image")));
-            this.UpExistence.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.UpExistence.Name = "UpExistence";
-            this.UpExistence.Size = new System.Drawing.Size(159, 22);
-            this.UpExistence.Text = "Выше   Shift+W";
-            this.UpExistence.Click += new System.EventHandler(this.UpObjects);
-            // 
-            // DownExistence
-            // 
-            this.DownExistence.Image = ((System.Drawing.Image)(resources.GetObject("DownExistence.Image")));
-            this.DownExistence.Name = "DownExistence";
-            this.DownExistence.Size = new System.Drawing.Size(159, 22);
-            this.DownExistence.Text = "Ниже    Shift+S";
-            this.DownExistence.Click += new System.EventHandler(this.DownObjects);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(188, 6);
-            // 
-            // экспортToolStripMenuItem
-            // 
-            this.экспортToolStripMenuItem.Image = global::NpcGenDataEditorByLuka.Properties.Resources.document_export;
-            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
-            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.экспортToolStripMenuItem.Text = "Экспорт";
-            this.экспортToolStripMenuItem.Click += new System.EventHandler(this.ExportExistence_Click);
-            // 
-            // импортToolStripMenuItem
-            // 
-            this.импортToolStripMenuItem.Image = global::NpcGenDataEditorByLuka.Properties.Resources.import;
-            this.импортToolStripMenuItem.Name = "импортToolStripMenuItem";
-            this.импортToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.импортToolStripMenuItem.Text = "Импорт";
-            this.импортToolStripMenuItem.Click += new System.EventHandler(this.ImportExistence_Click);
             // 
             // MainGroupBox
             // 
@@ -1795,14 +1703,6 @@
             this.contextMenuStrip2.Name = "TriggersContext";
             this.contextMenuStrip2.Size = new System.Drawing.Size(182, 26);
             this.contextMenuStrip2.Text = "Дополнительно";
-            // 
-            // MoveToTrigger
-            // 
-            this.MoveToTrigger.Image = ((System.Drawing.Image)(resources.GetObject("MoveToTrigger.Image")));
-            this.MoveToTrigger.Name = "MoveToTrigger";
-            this.MoveToTrigger.Size = new System.Drawing.Size(181, 22);
-            this.MoveToTrigger.Text = "Перейти к триггеру";
-            this.MoveToTrigger.Click += new System.EventHandler(this.MoveToTrigger_Click);
             // 
             // label18
             // 
@@ -2168,38 +2068,6 @@
             this.label20.Text = "Макс.колво:";
             this.toolTip1.SetToolTip(this.label20, "Максимальное количество респящихся мобов\r\nMaximum amount of respawn existence");
             // 
-            // ExistenceRemoveButton
-            // 
-            this.ExistenceRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ExistenceRemoveButton.ForeColor = System.Drawing.Color.Black;
-            this.ExistenceRemoveButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.remove;
-            this.ExistenceRemoveButton.Location = new System.Drawing.Point(180, 454);
-            this.ExistenceRemoveButton.Name = "ExistenceRemoveButton";
-            this.ExistenceRemoveButton.Size = new System.Drawing.Size(181, 29);
-            this.ExistenceRemoveButton.TabIndex = 11;
-            this.ExistenceRemoveButton.TabStop = false;
-            this.ExistenceRemoveButton.Text = "Удалить";
-            this.ExistenceRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ExistenceRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ExistenceRemoveButton.UseVisualStyleBackColor = true;
-            this.ExistenceRemoveButton.Click += new System.EventHandler(this.RemoveNpcAndMobFull);
-            // 
-            // ExistenceCloneButton
-            // 
-            this.ExistenceCloneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ExistenceCloneButton.ForeColor = System.Drawing.Color.Black;
-            this.ExistenceCloneButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Clone;
-            this.ExistenceCloneButton.Location = new System.Drawing.Point(0, 454);
-            this.ExistenceCloneButton.Name = "ExistenceCloneButton";
-            this.ExistenceCloneButton.Size = new System.Drawing.Size(181, 29);
-            this.ExistenceCloneButton.TabIndex = 9;
-            this.ExistenceCloneButton.TabStop = false;
-            this.ExistenceCloneButton.Text = "Клонировать";
-            this.ExistenceCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ExistenceCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ExistenceCloneButton.UseVisualStyleBackColor = true;
-            this.ExistenceCloneButton.Click += new System.EventHandler(this.CloneNpcAndMobFull);
-            // 
             // ExistenceToolStrip
             // 
             this.ExistenceToolStrip.AutoSize = false;
@@ -2216,83 +2084,6 @@
             this.ExistenceToolStrip.Size = new System.Drawing.Size(960, 25);
             this.ExistenceToolStrip.TabIndex = 16;
             this.ExistenceToolStrip.Text = "toolStrip1";
-            // 
-            // ExportExistence
-            // 
-            this.ExportExistence.Image = ((System.Drawing.Image)(resources.GetObject("ExportExistence.Image")));
-            this.ExportExistence.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ExportExistence.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ExportExistence.Name = "ExportExistence";
-            this.ExportExistence.Size = new System.Drawing.Size(74, 22);
-            this.ExportExistence.Text = "Экспорт";
-            this.ExportExistence.ToolTipText = "Export";
-            this.ExportExistence.Click += new System.EventHandler(this.ExportExistence_Click);
-            // 
-            // ImportExistence
-            // 
-            this.ImportExistence.Image = ((System.Drawing.Image)(resources.GetObject("ImportExistence.Image")));
-            this.ImportExistence.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ImportExistence.Name = "ImportExistence";
-            this.ImportExistence.Size = new System.Drawing.Size(71, 22);
-            this.ImportExistence.Text = "Импорт";
-            this.ImportExistence.ToolTipText = "Import";
-            this.ImportExistence.Click += new System.EventHandler(this.ImportExistence_Click);
-            // 
-            // LineUpExistenceDropDown
-            // 
-            this.LineUpExistenceDropDown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripLineUpX,
-            this.ToolStripLineUpZ});
-            this.LineUpExistenceDropDown.Image = ((System.Drawing.Image)(resources.GetObject("LineUpExistenceDropDown.Image")));
-            this.LineUpExistenceDropDown.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.LineUpExistenceDropDown.Name = "LineUpExistenceDropDown";
-            this.LineUpExistenceDropDown.Size = new System.Drawing.Size(95, 22);
-            this.LineUpExistenceDropDown.Text = "Выстроить";
-            this.LineUpExistenceDropDown.ToolTipText = "Line up";
-            // 
-            // ToolStripLineUpX
-            // 
-            this.ToolStripLineUpX.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripLineUpX.Image")));
-            this.ToolStripLineUpX.Name = "ToolStripLineUpX";
-            this.ToolStripLineUpX.Size = new System.Drawing.Size(100, 22);
-            this.ToolStripLineUpX.Text = "По X";
-            this.ToolStripLineUpX.Click += new System.EventHandler(this.LineUpX_Click);
-            // 
-            // ToolStripLineUpZ
-            // 
-            this.ToolStripLineUpZ.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripLineUpZ.Image")));
-            this.ToolStripLineUpZ.Name = "ToolStripLineUpZ";
-            this.ToolStripLineUpZ.Size = new System.Drawing.Size(100, 22);
-            this.ToolStripLineUpZ.Text = "По Z";
-            this.ToolStripLineUpZ.Click += new System.EventHandler(this.LineUpZ_Click);
-            // 
-            // MoveExistenceDropDown
-            // 
-            this.MoveExistenceDropDown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MoveUpToolStripMenuItem,
-            this.MoveDownToolStripMenuItem});
-            this.MoveExistenceDropDown.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
-            this.MoveExistenceDropDown.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.MoveExistenceDropDown.Name = "MoveExistenceDropDown";
-            this.MoveExistenceDropDown.Size = new System.Drawing.Size(108, 22);
-            this.MoveExistenceDropDown.Text = "Переместить";
-            this.MoveExistenceDropDown.ToolTipText = "Move";
-            // 
-            // MoveUpToolStripMenuItem
-            // 
-            this.MoveUpToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("MoveUpToolStripMenuItem.Image")));
-            this.MoveUpToolStripMenuItem.Name = "MoveUpToolStripMenuItem";
-            this.MoveUpToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.MoveUpToolStripMenuItem.Text = "Выше   Shift+W";
-            this.MoveUpToolStripMenuItem.Click += new System.EventHandler(this.UpObjects);
-            // 
-            // MoveDownToolStripMenuItem
-            // 
-            this.MoveDownToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("MoveDownToolStripMenuItem.Image")));
-            this.MoveDownToolStripMenuItem.Name = "MoveDownToolStripMenuItem";
-            this.MoveDownToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.MoveDownToolStripMenuItem.Text = "Ниже    Shift+S";
-            this.MoveDownToolStripMenuItem.Click += new System.EventHandler(this.DownObjects);
             // 
             // ResourcesTab
             // 
@@ -2479,36 +2270,6 @@
             this.label60.Size = new System.Drawing.Size(22, 15);
             this.label60.TabIndex = 37;
             this.label60.Text = "ID:";
-            // 
-            // ResourcesGroupRemoveButton
-            // 
-            this.ResourcesGroupRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ResourcesGroupRemoveButton.ForeColor = System.Drawing.Color.Black;
-            this.ResourcesGroupRemoveButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesGroupRemoveButton.Image")));
-            this.ResourcesGroupRemoveButton.Location = new System.Drawing.Point(110, 201);
-            this.ResourcesGroupRemoveButton.Name = "ResourcesGroupRemoveButton";
-            this.ResourcesGroupRemoveButton.Size = new System.Drawing.Size(110, 27);
-            this.ResourcesGroupRemoveButton.TabIndex = 16;
-            this.ResourcesGroupRemoveButton.Text = "Удалить";
-            this.ResourcesGroupRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ResourcesGroupRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ResourcesGroupRemoveButton.UseVisualStyleBackColor = true;
-            this.ResourcesGroupRemoveButton.Click += new System.EventHandler(this.RemoveResourcesInGroup_Click);
-            // 
-            // ResourcesGroupCloneButton
-            // 
-            this.ResourcesGroupCloneButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ResourcesGroupCloneButton.ForeColor = System.Drawing.Color.Black;
-            this.ResourcesGroupCloneButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesGroupCloneButton.Image")));
-            this.ResourcesGroupCloneButton.Location = new System.Drawing.Point(0, 201);
-            this.ResourcesGroupCloneButton.Name = "ResourcesGroupCloneButton";
-            this.ResourcesGroupCloneButton.Size = new System.Drawing.Size(110, 27);
-            this.ResourcesGroupCloneButton.TabIndex = 15;
-            this.ResourcesGroupCloneButton.Text = "Клонировать";
-            this.ResourcesGroupCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ResourcesGroupCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ResourcesGroupCloneButton.UseVisualStyleBackColor = true;
-            this.ResourcesGroupCloneButton.Click += new System.EventHandler(this.CloneResourcesInGroup_Click);
             // 
             // ResourcesGroupGrid
             // 
@@ -3189,122 +2950,15 @@
             this.toolStrip1.TabIndex = 19;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // ExportResources
-            // 
-            this.ExportResources.Image = ((System.Drawing.Image)(resources.GetObject("ExportResources.Image")));
-            this.ExportResources.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ExportResources.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ExportResources.Name = "ExportResources";
-            this.ExportResources.Size = new System.Drawing.Size(74, 22);
-            this.ExportResources.Text = "Экспорт";
-            this.ExportResources.ToolTipText = "Export";
-            this.ExportResources.Click += new System.EventHandler(this.ExportExistence_Click);
-            // 
-            // ImportResources
-            // 
-            this.ImportResources.Image = ((System.Drawing.Image)(resources.GetObject("ImportResources.Image")));
-            this.ImportResources.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ImportResources.Name = "ImportResources";
-            this.ImportResources.Size = new System.Drawing.Size(71, 22);
-            this.ImportResources.Text = "Импорт";
-            this.ImportResources.ToolTipText = "Import";
-            this.ImportResources.Click += new System.EventHandler(this.ImportExistence_Click);
-            // 
-            // LineUpResource
-            // 
-            this.LineUpResource.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ResourcesOnX,
-            this.ResourcesOnZ});
-            this.LineUpResource.Image = ((System.Drawing.Image)(resources.GetObject("LineUpResource.Image")));
-            this.LineUpResource.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.LineUpResource.Name = "LineUpResource";
-            this.LineUpResource.Size = new System.Drawing.Size(95, 22);
-            this.LineUpResource.Text = "Выстроить";
-            this.LineUpResource.ToolTipText = "Line up";
-            // 
-            // ResourcesOnX
-            // 
-            this.ResourcesOnX.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesOnX.Image")));
-            this.ResourcesOnX.Name = "ResourcesOnX";
-            this.ResourcesOnX.Size = new System.Drawing.Size(100, 22);
-            this.ResourcesOnX.Text = "По X";
-            this.ResourcesOnX.Click += new System.EventHandler(this.LineUpX_Click);
-            // 
-            // ResourcesOnZ
-            // 
-            this.ResourcesOnZ.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesOnZ.Image")));
-            this.ResourcesOnZ.Name = "ResourcesOnZ";
-            this.ResourcesOnZ.Size = new System.Drawing.Size(100, 22);
-            this.ResourcesOnZ.Text = "По Z";
-            this.ResourcesOnZ.Click += new System.EventHandler(this.LineUpZ_Click);
-            // 
-            // MoveResources
-            // 
-            this.MoveResources.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ResourceUp,
-            this.ResourceDown});
-            this.MoveResources.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
-            this.MoveResources.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.MoveResources.Name = "MoveResources";
-            this.MoveResources.Size = new System.Drawing.Size(108, 22);
-            this.MoveResources.Text = "Переместить";
-            this.MoveResources.ToolTipText = "Move";
-            // 
-            // ResourceUp
-            // 
-            this.ResourceUp.Image = ((System.Drawing.Image)(resources.GetObject("ResourceUp.Image")));
-            this.ResourceUp.Name = "ResourceUp";
-            this.ResourceUp.Size = new System.Drawing.Size(159, 22);
-            this.ResourceUp.Text = "Выше   Shift+W";
-            this.ResourceUp.Click += new System.EventHandler(this.UpObjects);
-            // 
-            // ResourceDown
-            // 
-            this.ResourceDown.Image = ((System.Drawing.Image)(resources.GetObject("ResourceDown.Image")));
-            this.ResourceDown.Name = "ResourceDown";
-            this.ResourceDown.Size = new System.Drawing.Size(159, 22);
-            this.ResourceDown.Text = "Ниже    Shift+S";
-            this.ResourceDown.Click += new System.EventHandler(this.DownObjects);
-            // 
-            // ResourcesRemoveButton
-            // 
-            this.ResourcesRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ResourcesRemoveButton.ForeColor = System.Drawing.Color.Black;
-            this.ResourcesRemoveButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesRemoveButton.Image")));
-            this.ResourcesRemoveButton.Location = new System.Drawing.Point(180, 454);
-            this.ResourcesRemoveButton.Name = "ResourcesRemoveButton";
-            this.ResourcesRemoveButton.Size = new System.Drawing.Size(181, 29);
-            this.ResourcesRemoveButton.TabIndex = 16;
-            this.ResourcesRemoveButton.Text = "Удалить";
-            this.ResourcesRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ResourcesRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ResourcesRemoveButton.UseVisualStyleBackColor = true;
-            this.ResourcesRemoveButton.Click += new System.EventHandler(this.RemoveResourceFull_Click);
-            // 
-            // ResourcesCloneButton
-            // 
-            this.ResourcesCloneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ResourcesCloneButton.ForeColor = System.Drawing.Color.Black;
-            this.ResourcesCloneButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesCloneButton.Image")));
-            this.ResourcesCloneButton.Location = new System.Drawing.Point(0, 454);
-            this.ResourcesCloneButton.Name = "ResourcesCloneButton";
-            this.ResourcesCloneButton.Size = new System.Drawing.Size(181, 29);
-            this.ResourcesCloneButton.TabIndex = 15;
-            this.ResourcesCloneButton.Text = "Клонировать";
-            this.ResourcesCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ResourcesCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ResourcesCloneButton.UseVisualStyleBackColor = true;
-            this.ResourcesCloneButton.Click += new System.EventHandler(this.CloneResurcesFull_Click);
-            // 
             // DynObjectsTab
             // 
             this.DynObjectsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
             this.DynObjectsTab.Controls.Add(this.groupBox9);
             this.DynObjectsTab.Controls.Add(this.groupBox7);
             this.DynObjectsTab.Controls.Add(this.DynamicGrid);
+            this.DynObjectsTab.Controls.Add(this.toolStrip2);
             this.DynObjectsTab.Controls.Add(this.DynObjectsRemoveButton);
             this.DynObjectsTab.Controls.Add(this.DynObjectsCloneButton);
-            this.DynObjectsTab.Controls.Add(this.toolStrip2);
             this.DynObjectsTab.Location = new System.Drawing.Point(4, 22);
             this.DynObjectsTab.Name = "DynObjectsTab";
             this.DynObjectsTab.Padding = new System.Windows.Forms.Padding(3);
@@ -3321,15 +2975,6 @@
             this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Изображение";
-            // 
-            // DynamicPictureBox
-            // 
-            this.DynamicPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
-            this.DynamicPictureBox.Location = new System.Drawing.Point(2, 15);
-            this.DynamicPictureBox.Name = "DynamicPictureBox";
-            this.DynamicPictureBox.Size = new System.Drawing.Size(594, 335);
-            this.DynamicPictureBox.TabIndex = 0;
-            this.DynamicPictureBox.TabStop = false;
             // 
             // groupBox7
             // 
@@ -3733,36 +3378,6 @@
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column1.Width = 59;
             // 
-            // DynObjectsRemoveButton
-            // 
-            this.DynObjectsRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DynObjectsRemoveButton.ForeColor = System.Drawing.Color.Black;
-            this.DynObjectsRemoveButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.remove;
-            this.DynObjectsRemoveButton.Location = new System.Drawing.Point(180, 454);
-            this.DynObjectsRemoveButton.Name = "DynObjectsRemoveButton";
-            this.DynObjectsRemoveButton.Size = new System.Drawing.Size(181, 29);
-            this.DynObjectsRemoveButton.TabIndex = 19;
-            this.DynObjectsRemoveButton.Text = "Удалить";
-            this.DynObjectsRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.DynObjectsRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.DynObjectsRemoveButton.UseVisualStyleBackColor = true;
-            this.DynObjectsRemoveButton.Click += new System.EventHandler(this.DDelete_button_Click);
-            // 
-            // DynObjectsCloneButton
-            // 
-            this.DynObjectsCloneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DynObjectsCloneButton.ForeColor = System.Drawing.Color.Black;
-            this.DynObjectsCloneButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Clone;
-            this.DynObjectsCloneButton.Location = new System.Drawing.Point(0, 454);
-            this.DynObjectsCloneButton.Name = "DynObjectsCloneButton";
-            this.DynObjectsCloneButton.Size = new System.Drawing.Size(181, 29);
-            this.DynObjectsCloneButton.TabIndex = 18;
-            this.DynObjectsCloneButton.Text = "Клонировать";
-            this.DynObjectsCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.DynObjectsCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.DynObjectsCloneButton.UseVisualStyleBackColor = true;
-            this.DynObjectsCloneButton.Click += new System.EventHandler(this.DClone_button_Click);
-            // 
             // toolStrip2
             // 
             this.toolStrip2.AutoSize = false;
@@ -3779,83 +3394,6 @@
             this.toolStrip2.Size = new System.Drawing.Size(960, 25);
             this.toolStrip2.TabIndex = 22;
             this.toolStrip2.Text = "toolStrip2";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(74, 22);
-            this.toolStripButton3.Text = "Экспорт";
-            this.toolStripButton3.ToolTipText = "Export";
-            this.toolStripButton3.Click += new System.EventHandler(this.ExportExistence_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(71, 22);
-            this.toolStripButton4.Text = "Импорт";
-            this.toolStripButton4.ToolTipText = "Import";
-            this.toolStripButton4.Click += new System.EventHandler(this.ImportExistence_Click);
-            // 
-            // toolStripDropDownButton3
-            // 
-            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem7,
-            this.toolStripMenuItem8});
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(95, 22);
-            this.toolStripDropDownButton3.Text = "Выстроить";
-            this.toolStripDropDownButton3.ToolTipText = "Line up";
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem7.Image")));
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(100, 22);
-            this.toolStripMenuItem7.Text = "По X";
-            this.toolStripMenuItem7.Click += new System.EventHandler(this.LineUpX_Click);
-            // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem8.Image")));
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(100, 22);
-            this.toolStripMenuItem8.Text = "По Z";
-            this.toolStripMenuItem8.Click += new System.EventHandler(this.LineUpZ_Click);
-            // 
-            // toolStripDropDownButton4
-            // 
-            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem9,
-            this.toolStripMenuItem10});
-            this.toolStripDropDownButton4.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
-            this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(108, 22);
-            this.toolStripDropDownButton4.Text = "Переместить";
-            this.toolStripDropDownButton4.ToolTipText = "Move";
-            // 
-            // toolStripMenuItem9
-            // 
-            this.toolStripMenuItem9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem9.Image")));
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(159, 22);
-            this.toolStripMenuItem9.Text = "Выше   Shift+W";
-            this.toolStripMenuItem9.Click += new System.EventHandler(this.UpObjects);
-            // 
-            // toolStripMenuItem10
-            // 
-            this.toolStripMenuItem10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem10.Image")));
-            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(159, 22);
-            this.toolStripMenuItem10.Text = "Ниже    Shift+S";
-            this.toolStripMenuItem10.Click += new System.EventHandler(this.DownObjects);
             // 
             // TriggersTab
             // 
@@ -3958,21 +3496,6 @@
             this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn27.Width = 120;
             // 
-            // GotoDynamicsContacts
-            // 
-            this.GotoDynamicsContacts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GotoDynamicsContacts.ForeColor = System.Drawing.Color.Black;
-            this.GotoDynamicsContacts.Image = ((System.Drawing.Image)(resources.GetObject("GotoDynamicsContacts.Image")));
-            this.GotoDynamicsContacts.Location = new System.Drawing.Point(1, 211);
-            this.GotoDynamicsContacts.Name = "GotoDynamicsContacts";
-            this.GotoDynamicsContacts.Size = new System.Drawing.Size(196, 57);
-            this.GotoDynamicsContacts.TabIndex = 27;
-            this.GotoDynamicsContacts.Text = "Перейти к выбранному";
-            this.GotoDynamicsContacts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.GotoDynamicsContacts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.GotoDynamicsContacts.UseVisualStyleBackColor = true;
-            this.GotoDynamicsContacts.Click += new System.EventHandler(this.GotoDynamicsContacts_Click);
-            // 
             // groupBox14
             // 
             this.groupBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
@@ -4056,21 +3579,6 @@
             this.dataGridViewTextBoxColumn24.ReadOnly = true;
             this.dataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn24.Width = 120;
-            // 
-            // GotoResourcesContacts
-            // 
-            this.GotoResourcesContacts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GotoResourcesContacts.ForeColor = System.Drawing.Color.Black;
-            this.GotoResourcesContacts.Image = ((System.Drawing.Image)(resources.GetObject("GotoResourcesContacts.Image")));
-            this.GotoResourcesContacts.Location = new System.Drawing.Point(1, 211);
-            this.GotoResourcesContacts.Name = "GotoResourcesContacts";
-            this.GotoResourcesContacts.Size = new System.Drawing.Size(196, 57);
-            this.GotoResourcesContacts.TabIndex = 27;
-            this.GotoResourcesContacts.Text = "Перейти к выбранному";
-            this.GotoResourcesContacts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.GotoResourcesContacts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.GotoResourcesContacts.UseVisualStyleBackColor = true;
-            this.GotoResourcesContacts.Click += new System.EventHandler(this.GotoResourcesContacts_Click);
             // 
             // groupBox13
             // 
@@ -4156,21 +3664,6 @@
             this.dataGridViewTextBoxColumn30.ReadOnly = true;
             this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn30.Width = 120;
-            // 
-            // GotoNpcMobsContacts
-            // 
-            this.GotoNpcMobsContacts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GotoNpcMobsContacts.ForeColor = System.Drawing.Color.Black;
-            this.GotoNpcMobsContacts.Image = ((System.Drawing.Image)(resources.GetObject("GotoNpcMobsContacts.Image")));
-            this.GotoNpcMobsContacts.Location = new System.Drawing.Point(1, 211);
-            this.GotoNpcMobsContacts.Name = "GotoNpcMobsContacts";
-            this.GotoNpcMobsContacts.Size = new System.Drawing.Size(196, 57);
-            this.GotoNpcMobsContacts.TabIndex = 27;
-            this.GotoNpcMobsContacts.Text = "Перейти к выбранному";
-            this.GotoNpcMobsContacts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.GotoNpcMobsContacts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.GotoNpcMobsContacts.UseVisualStyleBackColor = true;
-            this.GotoNpcMobsContacts.Click += new System.EventHandler(this.GotoNpcMobsContacts_Click);
             // 
             // groupBox12
             // 
@@ -4765,61 +4258,10 @@
             this.TriggersContext.Size = new System.Drawing.Size(215, 98);
             this.TriggersContext.Text = "Дополнительно";
             // 
-            // DeleteEmptyTrigger
-            // 
-            this.DeleteEmptyTrigger.Image = ((System.Drawing.Image)(resources.GetObject("DeleteEmptyTrigger.Image")));
-            this.DeleteEmptyTrigger.Name = "DeleteEmptyTrigger";
-            this.DeleteEmptyTrigger.Size = new System.Drawing.Size(214, 22);
-            this.DeleteEmptyTrigger.Text = "Удалить пустые триггеры";
-            this.DeleteEmptyTrigger.Click += new System.EventHandler(this.DeleteEmptyTrigger_Click);
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.UpTrigger,
-            this.DownTrigger});
-            this.toolStripMenuItem4.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(214, 22);
-            this.toolStripMenuItem4.Text = "Переместить";
-            // 
-            // UpTrigger
-            // 
-            this.UpTrigger.Image = ((System.Drawing.Image)(resources.GetObject("UpTrigger.Image")));
-            this.UpTrigger.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.UpTrigger.Name = "UpTrigger";
-            this.UpTrigger.Size = new System.Drawing.Size(107, 22);
-            this.UpTrigger.Text = "Выше";
-            this.UpTrigger.Click += new System.EventHandler(this.UpObjects);
-            // 
-            // DownTrigger
-            // 
-            this.DownTrigger.Image = ((System.Drawing.Image)(resources.GetObject("DownTrigger.Image")));
-            this.DownTrigger.Name = "DownTrigger";
-            this.DownTrigger.Size = new System.Drawing.Size(107, 22);
-            this.DownTrigger.Text = "Ниже";
-            this.DownTrigger.Click += new System.EventHandler(this.DownObjects);
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(211, 6);
-            // 
-            // toolStripMenuItem12
-            // 
-            this.toolStripMenuItem12.Image = global::NpcGenDataEditorByLuka.Properties.Resources.document_export;
-            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(214, 22);
-            this.toolStripMenuItem12.Text = "Экспорт";
-            this.toolStripMenuItem12.Click += new System.EventHandler(this.ExportExistence_Click);
-            // 
-            // toolStripMenuItem11
-            // 
-            this.toolStripMenuItem11.Image = global::NpcGenDataEditorByLuka.Properties.Resources.import;
-            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(214, 22);
-            this.toolStripMenuItem11.Text = "Импорт";
-            this.toolStripMenuItem11.Click += new System.EventHandler(this.ImportExistence_Click);
             // 
             // toolStrip3
             // 
@@ -4837,95 +4279,6 @@
             this.toolStrip3.Size = new System.Drawing.Size(960, 25);
             this.toolStrip3.TabIndex = 32;
             this.toolStrip3.Text = "toolStrip3";
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(74, 22);
-            this.toolStripButton5.Text = "Экспорт";
-            this.toolStripButton5.ToolTipText = "Export";
-            this.toolStripButton5.Click += new System.EventHandler(this.ExportExistence_Click);
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(71, 22);
-            this.toolStripButton6.Text = "Импорт";
-            this.toolStripButton6.ToolTipText = "Import";
-            this.toolStripButton6.Click += new System.EventHandler(this.ImportExistence_Click);
-            // 
-            // toolStripDropDownButton6
-            // 
-            this.toolStripDropDownButton6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem13,
-            this.toolStripMenuItem14});
-            this.toolStripDropDownButton6.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
-            this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
-            this.toolStripDropDownButton6.Size = new System.Drawing.Size(108, 22);
-            this.toolStripDropDownButton6.Text = "Переместить";
-            this.toolStripDropDownButton6.ToolTipText = "Move";
-            // 
-            // toolStripMenuItem13
-            // 
-            this.toolStripMenuItem13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem13.Image")));
-            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(159, 22);
-            this.toolStripMenuItem13.Text = "Выше   Shift+W";
-            this.toolStripMenuItem13.Click += new System.EventHandler(this.UpObjects);
-            // 
-            // toolStripMenuItem14
-            // 
-            this.toolStripMenuItem14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem14.Image")));
-            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(159, 22);
-            this.toolStripMenuItem14.Text = "Ниже    Shift+S";
-            this.toolStripMenuItem14.Click += new System.EventHandler(this.DownObjects);
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.Image = global::NpcGenDataEditorByLuka.Properties.Resources.remove;
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(79, 22);
-            this.toolStripButton7.Text = "Очистить";
-            this.toolStripButton7.ToolTipText = "Russian-: Удалить пустые триггеры\r\nEnglish-: Remove empty triggers";
-            this.toolStripButton7.Click += new System.EventHandler(this.DeleteEmptyTrigger_Click);
-            // 
-            // TriggersRemoveButton
-            // 
-            this.TriggersRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.TriggersRemoveButton.ForeColor = System.Drawing.Color.Black;
-            this.TriggersRemoveButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.remove;
-            this.TriggersRemoveButton.Location = new System.Drawing.Point(180, 454);
-            this.TriggersRemoveButton.Name = "TriggersRemoveButton";
-            this.TriggersRemoveButton.Size = new System.Drawing.Size(181, 29);
-            this.TriggersRemoveButton.TabIndex = 21;
-            this.TriggersRemoveButton.Text = "Удалить";
-            this.TriggersRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.TriggersRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.TriggersRemoveButton.UseVisualStyleBackColor = true;
-            this.TriggersRemoveButton.Click += new System.EventHandler(this.DeleteTrigger_Click);
-            // 
-            // TriggersCloneButton
-            // 
-            this.TriggersCloneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.TriggersCloneButton.ForeColor = System.Drawing.Color.Black;
-            this.TriggersCloneButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Clone;
-            this.TriggersCloneButton.Location = new System.Drawing.Point(0, 454);
-            this.TriggersCloneButton.Name = "TriggersCloneButton";
-            this.TriggersCloneButton.Size = new System.Drawing.Size(181, 29);
-            this.TriggersCloneButton.TabIndex = 20;
-            this.TriggersCloneButton.Text = "Клонировать";
-            this.TriggersCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.TriggersCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.TriggersCloneButton.UseVisualStyleBackColor = true;
-            this.TriggersCloneButton.Click += new System.EventHandler(this.CloneTrigger_Click);
             // 
             // SearchTab
             // 
@@ -5036,14 +4389,6 @@
             this.contextMenuStrip1.Size = new System.Drawing.Size(205, 26);
             this.contextMenuStrip1.Text = "Дополнительно";
             // 
-            // MoveToSelected
-            // 
-            this.MoveToSelected.Image = ((System.Drawing.Image)(resources.GetObject("MoveToSelected.Image")));
-            this.MoveToSelected.Name = "MoveToSelected";
-            this.MoveToSelected.Size = new System.Drawing.Size(204, 22);
-            this.MoveToSelected.Text = "Перейти к выбранному";
-            this.MoveToSelected.Click += new System.EventHandler(this.MoveToSelected_Click);
-            // 
             // groupBox21
             // 
             this.groupBox21.Controls.Add(this.TriggerSearchButton);
@@ -5061,23 +4406,6 @@
             this.groupBox21.TabIndex = 12;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Поиск в Триггерах";
-            // 
-            // TriggerSearchButton
-            // 
-            this.TriggerSearchButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TriggerSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TriggerSearchButton.ForeColor = System.Drawing.Color.Black;
-            this.TriggerSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("TriggerSearchButton.Image")));
-            this.TriggerSearchButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.TriggerSearchButton.Location = new System.Drawing.Point(1, 107);
-            this.TriggerSearchButton.Name = "TriggerSearchButton";
-            this.TriggerSearchButton.Size = new System.Drawing.Size(234, 45);
-            this.TriggerSearchButton.TabIndex = 31;
-            this.TriggerSearchButton.Text = "Найти";
-            this.TriggerSearchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.TriggerSearchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.TriggerSearchButton.UseVisualStyleBackColor = true;
-            this.TriggerSearchButton.Click += new System.EventHandler(this.TriggerSearchButton_Click);
             // 
             // TriggerSearchName
             // 
@@ -5185,23 +4513,6 @@
             this.groupBox20.TabIndex = 11;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Поиск в Дин.Объектах";
-            // 
-            // DynamicSearchButton
-            // 
-            this.DynamicSearchButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DynamicSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DynamicSearchButton.ForeColor = System.Drawing.Color.Black;
-            this.DynamicSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("DynamicSearchButton.Image")));
-            this.DynamicSearchButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.DynamicSearchButton.Location = new System.Drawing.Point(0, 107);
-            this.DynamicSearchButton.Name = "DynamicSearchButton";
-            this.DynamicSearchButton.Size = new System.Drawing.Size(234, 45);
-            this.DynamicSearchButton.TabIndex = 30;
-            this.DynamicSearchButton.Text = "Найти";
-            this.DynamicSearchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.DynamicSearchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.DynamicSearchButton.UseVisualStyleBackColor = true;
-            this.DynamicSearchButton.Click += new System.EventHandler(this.DynamicSearchButton_Click);
             // 
             // DynamicSearchTrigger
             // 
@@ -5311,23 +4622,6 @@
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Поиск в ресурсах";
             // 
-            // ResourceSearchButton
-            // 
-            this.ResourceSearchButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ResourceSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResourceSearchButton.ForeColor = System.Drawing.Color.Black;
-            this.ResourceSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourceSearchButton.Image")));
-            this.ResourceSearchButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ResourceSearchButton.Location = new System.Drawing.Point(1, 107);
-            this.ResourceSearchButton.Name = "ResourceSearchButton";
-            this.ResourceSearchButton.Size = new System.Drawing.Size(234, 45);
-            this.ResourceSearchButton.TabIndex = 29;
-            this.ResourceSearchButton.Text = "Найти";
-            this.ResourceSearchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ResourceSearchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ResourceSearchButton.UseVisualStyleBackColor = true;
-            this.ResourceSearchButton.Click += new System.EventHandler(this.ResourceSearchButton_Click);
-            // 
             // ResourceSearchTrigger
             // 
             this.ResourceSearchTrigger.Location = new System.Drawing.Point(80, 64);
@@ -5436,23 +4730,6 @@
             this.groupBox18.TabIndex = 0;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Поиск в существах";
-            // 
-            // ExistenceSearchButton
-            // 
-            this.ExistenceSearchButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ExistenceSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExistenceSearchButton.ForeColor = System.Drawing.Color.Black;
-            this.ExistenceSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("ExistenceSearchButton.Image")));
-            this.ExistenceSearchButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ExistenceSearchButton.Location = new System.Drawing.Point(0, 107);
-            this.ExistenceSearchButton.Name = "ExistenceSearchButton";
-            this.ExistenceSearchButton.Size = new System.Drawing.Size(234, 45);
-            this.ExistenceSearchButton.TabIndex = 28;
-            this.ExistenceSearchButton.Text = "Найти";
-            this.ExistenceSearchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ExistenceSearchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ExistenceSearchButton.UseVisualStyleBackColor = true;
-            this.ExistenceSearchButton.Click += new System.EventHandler(this.ExistenceSearchButton_Click);
             // 
             // ExistenceSearchPath
             // 
@@ -5577,36 +4854,6 @@
             this.ErrorsTab.TabIndex = 6;
             this.ErrorsTab.Text = "Ошибки";
             // 
-            // RemoveAllErrors
-            // 
-            this.RemoveAllErrors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.RemoveAllErrors.ForeColor = System.Drawing.Color.Black;
-            this.RemoveAllErrors.Image = ((System.Drawing.Image)(resources.GetObject("RemoveAllErrors.Image")));
-            this.RemoveAllErrors.Location = new System.Drawing.Point(187, 428);
-            this.RemoveAllErrors.Name = "RemoveAllErrors";
-            this.RemoveAllErrors.Size = new System.Drawing.Size(249, 54);
-            this.RemoveAllErrors.TabIndex = 18;
-            this.RemoveAllErrors.Text = "Удалить все объекты";
-            this.RemoveAllErrors.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RemoveAllErrors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.RemoveAllErrors.UseVisualStyleBackColor = true;
-            this.RemoveAllErrors.Click += new System.EventHandler(this.RemoveAllErrors_Click);
-            // 
-            // SearchErrorsButton
-            // 
-            this.SearchErrorsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.SearchErrorsButton.ForeColor = System.Drawing.Color.Black;
-            this.SearchErrorsButton.Image = ((System.Drawing.Image)(resources.GetObject("SearchErrorsButton.Image")));
-            this.SearchErrorsButton.Location = new System.Drawing.Point(0, 428);
-            this.SearchErrorsButton.Name = "SearchErrorsButton";
-            this.SearchErrorsButton.Size = new System.Drawing.Size(186, 54);
-            this.SearchErrorsButton.TabIndex = 17;
-            this.SearchErrorsButton.Text = "Найти ошибки";
-            this.SearchErrorsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SearchErrorsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SearchErrorsButton.UseVisualStyleBackColor = true;
-            this.SearchErrorsButton.Click += new System.EventHandler(this.SearchErrorsButton_Click);
-            // 
             // ErrorsGrid
             // 
             this.ErrorsGrid.AllowUserToAddRows = false;
@@ -5724,37 +4971,6 @@
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Interface";
             // 
-            // Clear
-            // 
-            this.Clear.BackColor = System.Drawing.Color.Transparent;
-            this.Clear.Checked = true;
-            this.Clear.ForeColor = System.Drawing.Color.Black;
-            this.Clear.Image = ((System.Drawing.Image)(resources.GetObject("Clear.Image")));
-            this.Clear.Location = new System.Drawing.Point(10, 19);
-            this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(85, 24);
-            this.Clear.TabIndex = 59;
-            this.Clear.TabStop = true;
-            this.Clear.Text = "Clear";
-            this.Clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Clear.UseVisualStyleBackColor = false;
-            this.Clear.CheckedChanged += new System.EventHandler(this.InterfaceColorChanged);
-            // 
-            // Dark
-            // 
-            this.Dark.BackColor = System.Drawing.Color.Transparent;
-            this.Dark.ForeColor = System.Drawing.Color.Black;
-            this.Dark.Image = ((System.Drawing.Image)(resources.GetObject("Dark.Image")));
-            this.Dark.Location = new System.Drawing.Point(10, 42);
-            this.Dark.Name = "Dark";
-            this.Dark.Size = new System.Drawing.Size(79, 24);
-            this.Dark.TabIndex = 60;
-            this.Dark.Text = "Dark";
-            this.Dark.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Dark.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Dark.UseVisualStyleBackColor = false;
-            this.Dark.CheckedChanged += new System.EventHandler(this.InterfaceColorChanged);
-            // 
             // groupBox22
             // 
             this.groupBox22.Controls.Add(this.Russian);
@@ -5765,37 +4981,6 @@
             this.groupBox22.TabIndex = 62;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Language";
-            // 
-            // Russian
-            // 
-            this.Russian.BackColor = System.Drawing.SystemColors.Control;
-            this.Russian.Checked = true;
-            this.Russian.ForeColor = System.Drawing.Color.Black;
-            this.Russian.Image = ((System.Drawing.Image)(resources.GetObject("Russian.Image")));
-            this.Russian.Location = new System.Drawing.Point(10, 19);
-            this.Russian.Name = "Russian";
-            this.Russian.Size = new System.Drawing.Size(85, 24);
-            this.Russian.TabIndex = 59;
-            this.Russian.TabStop = true;
-            this.Russian.Text = "Russian";
-            this.Russian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Russian.UseVisualStyleBackColor = false;
-            this.Russian.CheckedChanged += new System.EventHandler(this.ChangeLanguage);
-            // 
-            // English
-            // 
-            this.English.BackColor = System.Drawing.SystemColors.Control;
-            this.English.ForeColor = System.Drawing.Color.Black;
-            this.English.Image = ((System.Drawing.Image)(resources.GetObject("English.Image")));
-            this.English.Location = new System.Drawing.Point(10, 42);
-            this.English.Name = "English";
-            this.English.Size = new System.Drawing.Size(79, 24);
-            this.English.TabIndex = 60;
-            this.English.Text = "English";
-            this.English.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.English.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.English.UseVisualStyleBackColor = false;
-            this.English.CheckedChanged += new System.EventHandler(this.ChangeLanguage);
             // 
             // ConvertComboboxVersion
             // 
@@ -6090,36 +5275,6 @@
             this.Version_combobox.Size = new System.Drawing.Size(90, 21);
             this.Version_combobox.TabIndex = 16;
             // 
-            // ConvertAndSaveButton
-            // 
-            this.ConvertAndSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConvertAndSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.ConvertAndSaveButton.ForeColor = System.Drawing.Color.Black;
-            this.ConvertAndSaveButton.Image = ((System.Drawing.Image)(resources.GetObject("ConvertAndSaveButton.Image")));
-            this.ConvertAndSaveButton.Location = new System.Drawing.Point(175, 423);
-            this.ConvertAndSaveButton.Name = "ConvertAndSaveButton";
-            this.ConvertAndSaveButton.Size = new System.Drawing.Size(207, 60);
-            this.ConvertAndSaveButton.TabIndex = 17;
-            this.ConvertAndSaveButton.Text = "Конвертировать в     версию и сохранить";
-            this.ConvertAndSaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ConvertAndSaveButton.UseVisualStyleBackColor = true;
-            this.ConvertAndSaveButton.Click += new System.EventHandler(this.ConvertAndSaveButton_Click);
-            // 
-            // SaveFile
-            // 
-            this.SaveFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.SaveFile.ForeColor = System.Drawing.Color.Black;
-            this.SaveFile.Image = ((System.Drawing.Image)(resources.GetObject("SaveFile.Image")));
-            this.SaveFile.Location = new System.Drawing.Point(3, 423);
-            this.SaveFile.Name = "SaveFile";
-            this.SaveFile.Size = new System.Drawing.Size(169, 60);
-            this.SaveFile.TabIndex = 7;
-            this.SaveFile.Text = "Сохранить Npcgen.data";
-            this.SaveFile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SaveFile.UseVisualStyleBackColor = true;
-            this.SaveFile.Click += new System.EventHandler(this.SaveFile_Click);
-            // 
             // Maps_combobox
             // 
             this.Maps_combobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -6191,6 +5346,7 @@
             this.MapProgress.Size = new System.Drawing.Size(95, 22);
             this.MapProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.MapProgress.TabIndex = 0;
+            this.MapProgress.Click += new System.EventHandler(this.MapProgress_Click);
             // 
             // Dynamics_dialog
             // 
@@ -6235,6 +5391,869 @@
             this.Search_surfaces.UseVisualStyleBackColor = false;
             this.Search_surfaces.Click += new System.EventHandler(this.SearchSurfacesButton);
             // 
+            // ExistenceGroupCloneButton
+            // 
+            this.ExistenceGroupCloneButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ExistenceGroupCloneButton.ForeColor = System.Drawing.Color.Black;
+            this.ExistenceGroupCloneButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Clone;
+            this.ExistenceGroupCloneButton.Location = new System.Drawing.Point(378, 198);
+            this.ExistenceGroupCloneButton.Name = "ExistenceGroupCloneButton";
+            this.ExistenceGroupCloneButton.Size = new System.Drawing.Size(110, 29);
+            this.ExistenceGroupCloneButton.TabIndex = 15;
+            this.ExistenceGroupCloneButton.Text = "Клонировать";
+            this.ExistenceGroupCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ExistenceGroupCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ExistenceGroupCloneButton.UseVisualStyleBackColor = true;
+            this.ExistenceGroupCloneButton.Click += new System.EventHandler(this.CloneNpcinGroupButton_Click);
+            // 
+            // ExistenceGroupRemoveButton
+            // 
+            this.ExistenceGroupRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ExistenceGroupRemoveButton.ForeColor = System.Drawing.Color.Black;
+            this.ExistenceGroupRemoveButton.Image = ((System.Drawing.Image)(resources.GetObject("ExistenceGroupRemoveButton.Image")));
+            this.ExistenceGroupRemoveButton.Location = new System.Drawing.Point(488, 198);
+            this.ExistenceGroupRemoveButton.Name = "ExistenceGroupRemoveButton";
+            this.ExistenceGroupRemoveButton.Size = new System.Drawing.Size(110, 29);
+            this.ExistenceGroupRemoveButton.TabIndex = 16;
+            this.ExistenceGroupRemoveButton.Text = "Удалить";
+            this.ExistenceGroupRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ExistenceGroupRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ExistenceGroupRemoveButton.UseVisualStyleBackColor = true;
+            this.ExistenceGroupRemoveButton.Click += new System.EventHandler(this.DeleteNpcinGroupButton_Click);
+            // 
+            // LineUpX
+            // 
+            this.LineUpX.Image = ((System.Drawing.Image)(resources.GetObject("LineUpX.Image")));
+            this.LineUpX.Name = "LineUpX";
+            this.LineUpX.Size = new System.Drawing.Size(191, 22);
+            this.LineUpX.Text = "Выстроить в ряд по X";
+            this.LineUpX.Click += new System.EventHandler(this.LineUpX_Click);
+            // 
+            // LineUpZ
+            // 
+            this.LineUpZ.Image = ((System.Drawing.Image)(resources.GetObject("LineUpZ.Image")));
+            this.LineUpZ.Name = "LineUpZ";
+            this.LineUpZ.Size = new System.Drawing.Size(191, 22);
+            this.LineUpZ.Text = "Выстроить в ряд по Z";
+            this.LineUpZ.Click += new System.EventHandler(this.LineUpZ_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.UpExistence,
+            this.DownExistence,
+            this.toolStripSeparator4,
+            this.вНачалоToolStripMenuItem,
+            this.ExistenceToEnd});
+            this.toolStripMenuItem1.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(191, 22);
+            this.toolStripMenuItem1.Text = "Переместить";
+            // 
+            // UpExistence
+            // 
+            this.UpExistence.Image = ((System.Drawing.Image)(resources.GetObject("UpExistence.Image")));
+            this.UpExistence.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.UpExistence.Name = "UpExistence";
+            this.UpExistence.Size = new System.Drawing.Size(159, 22);
+            this.UpExistence.Text = "Выше   Shift+W";
+            this.UpExistence.Click += new System.EventHandler(this.UpObjects);
+            // 
+            // DownExistence
+            // 
+            this.DownExistence.Image = ((System.Drawing.Image)(resources.GetObject("DownExistence.Image")));
+            this.DownExistence.Name = "DownExistence";
+            this.DownExistence.Size = new System.Drawing.Size(159, 22);
+            this.DownExistence.Text = "Ниже    Shift+S";
+            this.DownExistence.Click += new System.EventHandler(this.DownObjects);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(156, 6);
+            // 
+            // вНачалоToolStripMenuItem
+            // 
+            this.вНачалоToolStripMenuItem.Name = "вНачалоToolStripMenuItem";
+            this.вНачалоToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.вНачалоToolStripMenuItem.Text = "В начало";
+            // 
+            // ExistenceToEnd
+            // 
+            this.ExistenceToEnd.Name = "ExistenceToEnd";
+            this.ExistenceToEnd.Size = new System.Drawing.Size(159, 22);
+            this.ExistenceToEnd.Text = "В конец";
+            this.ExistenceToEnd.Click += new System.EventHandler(this.ExistenceToEnd_Click);
+            // 
+            // экспортToolStripMenuItem
+            // 
+            this.экспортToolStripMenuItem.Image = global::NpcGenDataEditorByLuka.Properties.Resources.document_export;
+            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
+            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.экспортToolStripMenuItem.Text = "Экспорт";
+            this.экспортToolStripMenuItem.Click += new System.EventHandler(this.ExportExistence_Click);
+            // 
+            // импортToolStripMenuItem
+            // 
+            this.импортToolStripMenuItem.Image = global::NpcGenDataEditorByLuka.Properties.Resources.import;
+            this.импортToolStripMenuItem.Name = "импортToolStripMenuItem";
+            this.импортToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.импортToolStripMenuItem.Text = "Импорт";
+            this.импортToolStripMenuItem.Click += new System.EventHandler(this.ImportExistence_Click);
+            // 
+            // MoveToTrigger
+            // 
+            this.MoveToTrigger.Image = ((System.Drawing.Image)(resources.GetObject("MoveToTrigger.Image")));
+            this.MoveToTrigger.Name = "MoveToTrigger";
+            this.MoveToTrigger.Size = new System.Drawing.Size(181, 22);
+            this.MoveToTrigger.Text = "Перейти к триггеру";
+            this.MoveToTrigger.Click += new System.EventHandler(this.MoveToTrigger_Click);
+            // 
+            // ExistenceRemoveButton
+            // 
+            this.ExistenceRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ExistenceRemoveButton.ForeColor = System.Drawing.Color.Black;
+            this.ExistenceRemoveButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.remove;
+            this.ExistenceRemoveButton.Location = new System.Drawing.Point(180, 454);
+            this.ExistenceRemoveButton.Name = "ExistenceRemoveButton";
+            this.ExistenceRemoveButton.Size = new System.Drawing.Size(181, 29);
+            this.ExistenceRemoveButton.TabIndex = 11;
+            this.ExistenceRemoveButton.TabStop = false;
+            this.ExistenceRemoveButton.Text = "Удалить";
+            this.ExistenceRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ExistenceRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ExistenceRemoveButton.UseVisualStyleBackColor = true;
+            this.ExistenceRemoveButton.Click += new System.EventHandler(this.RemoveNpcAndMobFull);
+            // 
+            // ExistenceCloneButton
+            // 
+            this.ExistenceCloneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ExistenceCloneButton.ForeColor = System.Drawing.Color.Black;
+            this.ExistenceCloneButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Clone;
+            this.ExistenceCloneButton.Location = new System.Drawing.Point(0, 454);
+            this.ExistenceCloneButton.Name = "ExistenceCloneButton";
+            this.ExistenceCloneButton.Size = new System.Drawing.Size(181, 29);
+            this.ExistenceCloneButton.TabIndex = 9;
+            this.ExistenceCloneButton.TabStop = false;
+            this.ExistenceCloneButton.Text = "Клонировать";
+            this.ExistenceCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ExistenceCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ExistenceCloneButton.UseVisualStyleBackColor = true;
+            this.ExistenceCloneButton.Click += new System.EventHandler(this.CloneNpcAndMobFull);
+            // 
+            // ExportExistence
+            // 
+            this.ExportExistence.Image = ((System.Drawing.Image)(resources.GetObject("ExportExistence.Image")));
+            this.ExportExistence.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ExportExistence.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ExportExistence.Name = "ExportExistence";
+            this.ExportExistence.Size = new System.Drawing.Size(74, 22);
+            this.ExportExistence.Text = "Экспорт";
+            this.ExportExistence.ToolTipText = "Export";
+            this.ExportExistence.Click += new System.EventHandler(this.ExportExistence_Click);
+            // 
+            // ImportExistence
+            // 
+            this.ImportExistence.Image = ((System.Drawing.Image)(resources.GetObject("ImportExistence.Image")));
+            this.ImportExistence.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ImportExistence.Name = "ImportExistence";
+            this.ImportExistence.Size = new System.Drawing.Size(71, 22);
+            this.ImportExistence.Text = "Импорт";
+            this.ImportExistence.ToolTipText = "Import";
+            this.ImportExistence.Click += new System.EventHandler(this.ImportExistence_Click);
+            // 
+            // LineUpExistenceDropDown
+            // 
+            this.LineUpExistenceDropDown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripLineUpX,
+            this.ToolStripLineUpZ});
+            this.LineUpExistenceDropDown.Image = ((System.Drawing.Image)(resources.GetObject("LineUpExistenceDropDown.Image")));
+            this.LineUpExistenceDropDown.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LineUpExistenceDropDown.Name = "LineUpExistenceDropDown";
+            this.LineUpExistenceDropDown.Size = new System.Drawing.Size(95, 22);
+            this.LineUpExistenceDropDown.Text = "Выстроить";
+            this.LineUpExistenceDropDown.ToolTipText = "Line up";
+            // 
+            // ToolStripLineUpX
+            // 
+            this.ToolStripLineUpX.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripLineUpX.Image")));
+            this.ToolStripLineUpX.Name = "ToolStripLineUpX";
+            this.ToolStripLineUpX.Size = new System.Drawing.Size(100, 22);
+            this.ToolStripLineUpX.Text = "По X";
+            this.ToolStripLineUpX.Click += new System.EventHandler(this.LineUpX_Click);
+            // 
+            // ToolStripLineUpZ
+            // 
+            this.ToolStripLineUpZ.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripLineUpZ.Image")));
+            this.ToolStripLineUpZ.Name = "ToolStripLineUpZ";
+            this.ToolStripLineUpZ.Size = new System.Drawing.Size(100, 22);
+            this.ToolStripLineUpZ.Text = "По Z";
+            this.ToolStripLineUpZ.Click += new System.EventHandler(this.LineUpZ_Click);
+            // 
+            // MoveExistenceDropDown
+            // 
+            this.MoveExistenceDropDown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MoveUpToolStripMenuItem,
+            this.MoveDownToolStripMenuItem});
+            this.MoveExistenceDropDown.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
+            this.MoveExistenceDropDown.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.MoveExistenceDropDown.Name = "MoveExistenceDropDown";
+            this.MoveExistenceDropDown.Size = new System.Drawing.Size(108, 22);
+            this.MoveExistenceDropDown.Text = "Переместить";
+            this.MoveExistenceDropDown.ToolTipText = "Move";
+            // 
+            // MoveUpToolStripMenuItem
+            // 
+            this.MoveUpToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("MoveUpToolStripMenuItem.Image")));
+            this.MoveUpToolStripMenuItem.Name = "MoveUpToolStripMenuItem";
+            this.MoveUpToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.MoveUpToolStripMenuItem.Text = "Выше   Shift+W";
+            this.MoveUpToolStripMenuItem.Click += new System.EventHandler(this.UpObjects);
+            // 
+            // MoveDownToolStripMenuItem
+            // 
+            this.MoveDownToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("MoveDownToolStripMenuItem.Image")));
+            this.MoveDownToolStripMenuItem.Name = "MoveDownToolStripMenuItem";
+            this.MoveDownToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.MoveDownToolStripMenuItem.Text = "Ниже    Shift+S";
+            this.MoveDownToolStripMenuItem.Click += new System.EventHandler(this.DownObjects);
+            // 
+            // ResourcesGroupRemoveButton
+            // 
+            this.ResourcesGroupRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ResourcesGroupRemoveButton.ForeColor = System.Drawing.Color.Black;
+            this.ResourcesGroupRemoveButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesGroupRemoveButton.Image")));
+            this.ResourcesGroupRemoveButton.Location = new System.Drawing.Point(110, 201);
+            this.ResourcesGroupRemoveButton.Name = "ResourcesGroupRemoveButton";
+            this.ResourcesGroupRemoveButton.Size = new System.Drawing.Size(110, 27);
+            this.ResourcesGroupRemoveButton.TabIndex = 16;
+            this.ResourcesGroupRemoveButton.Text = "Удалить";
+            this.ResourcesGroupRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ResourcesGroupRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ResourcesGroupRemoveButton.UseVisualStyleBackColor = true;
+            this.ResourcesGroupRemoveButton.Click += new System.EventHandler(this.RemoveResourcesInGroup_Click);
+            // 
+            // ResourcesGroupCloneButton
+            // 
+            this.ResourcesGroupCloneButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ResourcesGroupCloneButton.ForeColor = System.Drawing.Color.Black;
+            this.ResourcesGroupCloneButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesGroupCloneButton.Image")));
+            this.ResourcesGroupCloneButton.Location = new System.Drawing.Point(0, 201);
+            this.ResourcesGroupCloneButton.Name = "ResourcesGroupCloneButton";
+            this.ResourcesGroupCloneButton.Size = new System.Drawing.Size(110, 27);
+            this.ResourcesGroupCloneButton.TabIndex = 15;
+            this.ResourcesGroupCloneButton.Text = "Клонировать";
+            this.ResourcesGroupCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ResourcesGroupCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ResourcesGroupCloneButton.UseVisualStyleBackColor = true;
+            this.ResourcesGroupCloneButton.Click += new System.EventHandler(this.CloneResourcesInGroup_Click);
+            // 
+            // ExportResources
+            // 
+            this.ExportResources.Image = ((System.Drawing.Image)(resources.GetObject("ExportResources.Image")));
+            this.ExportResources.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ExportResources.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ExportResources.Name = "ExportResources";
+            this.ExportResources.Size = new System.Drawing.Size(74, 22);
+            this.ExportResources.Text = "Экспорт";
+            this.ExportResources.ToolTipText = "Export";
+            this.ExportResources.Click += new System.EventHandler(this.ExportExistence_Click);
+            // 
+            // ImportResources
+            // 
+            this.ImportResources.Image = ((System.Drawing.Image)(resources.GetObject("ImportResources.Image")));
+            this.ImportResources.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ImportResources.Name = "ImportResources";
+            this.ImportResources.Size = new System.Drawing.Size(71, 22);
+            this.ImportResources.Text = "Импорт";
+            this.ImportResources.ToolTipText = "Import";
+            this.ImportResources.Click += new System.EventHandler(this.ImportExistence_Click);
+            // 
+            // LineUpResource
+            // 
+            this.LineUpResource.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ResourcesOnX,
+            this.ResourcesOnZ});
+            this.LineUpResource.Image = ((System.Drawing.Image)(resources.GetObject("LineUpResource.Image")));
+            this.LineUpResource.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LineUpResource.Name = "LineUpResource";
+            this.LineUpResource.Size = new System.Drawing.Size(95, 22);
+            this.LineUpResource.Text = "Выстроить";
+            this.LineUpResource.ToolTipText = "Line up";
+            // 
+            // ResourcesOnX
+            // 
+            this.ResourcesOnX.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesOnX.Image")));
+            this.ResourcesOnX.Name = "ResourcesOnX";
+            this.ResourcesOnX.Size = new System.Drawing.Size(100, 22);
+            this.ResourcesOnX.Text = "По X";
+            this.ResourcesOnX.Click += new System.EventHandler(this.LineUpX_Click);
+            // 
+            // ResourcesOnZ
+            // 
+            this.ResourcesOnZ.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesOnZ.Image")));
+            this.ResourcesOnZ.Name = "ResourcesOnZ";
+            this.ResourcesOnZ.Size = new System.Drawing.Size(100, 22);
+            this.ResourcesOnZ.Text = "По Z";
+            this.ResourcesOnZ.Click += new System.EventHandler(this.LineUpZ_Click);
+            // 
+            // MoveResources
+            // 
+            this.MoveResources.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ResourceUp,
+            this.ResourceDown});
+            this.MoveResources.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
+            this.MoveResources.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.MoveResources.Name = "MoveResources";
+            this.MoveResources.Size = new System.Drawing.Size(108, 22);
+            this.MoveResources.Text = "Переместить";
+            this.MoveResources.ToolTipText = "Move";
+            // 
+            // ResourceUp
+            // 
+            this.ResourceUp.Image = ((System.Drawing.Image)(resources.GetObject("ResourceUp.Image")));
+            this.ResourceUp.Name = "ResourceUp";
+            this.ResourceUp.Size = new System.Drawing.Size(159, 22);
+            this.ResourceUp.Text = "Выше   Shift+W";
+            this.ResourceUp.Click += new System.EventHandler(this.UpObjects);
+            // 
+            // ResourceDown
+            // 
+            this.ResourceDown.Image = ((System.Drawing.Image)(resources.GetObject("ResourceDown.Image")));
+            this.ResourceDown.Name = "ResourceDown";
+            this.ResourceDown.Size = new System.Drawing.Size(159, 22);
+            this.ResourceDown.Text = "Ниже    Shift+S";
+            this.ResourceDown.Click += new System.EventHandler(this.DownObjects);
+            // 
+            // ResourcesRemoveButton
+            // 
+            this.ResourcesRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ResourcesRemoveButton.ForeColor = System.Drawing.Color.Black;
+            this.ResourcesRemoveButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesRemoveButton.Image")));
+            this.ResourcesRemoveButton.Location = new System.Drawing.Point(180, 454);
+            this.ResourcesRemoveButton.Name = "ResourcesRemoveButton";
+            this.ResourcesRemoveButton.Size = new System.Drawing.Size(181, 29);
+            this.ResourcesRemoveButton.TabIndex = 16;
+            this.ResourcesRemoveButton.Text = "Удалить";
+            this.ResourcesRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ResourcesRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ResourcesRemoveButton.UseVisualStyleBackColor = true;
+            this.ResourcesRemoveButton.Click += new System.EventHandler(this.RemoveResourceFull_Click);
+            // 
+            // ResourcesCloneButton
+            // 
+            this.ResourcesCloneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ResourcesCloneButton.ForeColor = System.Drawing.Color.Black;
+            this.ResourcesCloneButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesCloneButton.Image")));
+            this.ResourcesCloneButton.Location = new System.Drawing.Point(0, 454);
+            this.ResourcesCloneButton.Name = "ResourcesCloneButton";
+            this.ResourcesCloneButton.Size = new System.Drawing.Size(181, 29);
+            this.ResourcesCloneButton.TabIndex = 15;
+            this.ResourcesCloneButton.Text = "Клонировать";
+            this.ResourcesCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ResourcesCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ResourcesCloneButton.UseVisualStyleBackColor = true;
+            this.ResourcesCloneButton.Click += new System.EventHandler(this.CloneResurcesFull_Click);
+            // 
+            // DynamicPictureBox
+            // 
+            this.DynamicPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
+            this.DynamicPictureBox.Location = new System.Drawing.Point(2, 15);
+            this.DynamicPictureBox.Name = "DynamicPictureBox";
+            this.DynamicPictureBox.Size = new System.Drawing.Size(594, 335);
+            this.DynamicPictureBox.TabIndex = 0;
+            this.DynamicPictureBox.TabStop = false;
+            // 
+            // DynObjectsRemoveButton
+            // 
+            this.DynObjectsRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DynObjectsRemoveButton.ForeColor = System.Drawing.Color.Black;
+            this.DynObjectsRemoveButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.remove;
+            this.DynObjectsRemoveButton.Location = new System.Drawing.Point(180, 454);
+            this.DynObjectsRemoveButton.Name = "DynObjectsRemoveButton";
+            this.DynObjectsRemoveButton.Size = new System.Drawing.Size(181, 29);
+            this.DynObjectsRemoveButton.TabIndex = 19;
+            this.DynObjectsRemoveButton.Text = "Удалить";
+            this.DynObjectsRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DynObjectsRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DynObjectsRemoveButton.UseVisualStyleBackColor = true;
+            this.DynObjectsRemoveButton.Click += new System.EventHandler(this.DDelete_button_Click);
+            // 
+            // DynObjectsCloneButton
+            // 
+            this.DynObjectsCloneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DynObjectsCloneButton.ForeColor = System.Drawing.Color.Black;
+            this.DynObjectsCloneButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Clone;
+            this.DynObjectsCloneButton.Location = new System.Drawing.Point(0, 454);
+            this.DynObjectsCloneButton.Name = "DynObjectsCloneButton";
+            this.DynObjectsCloneButton.Size = new System.Drawing.Size(181, 29);
+            this.DynObjectsCloneButton.TabIndex = 18;
+            this.DynObjectsCloneButton.Text = "Клонировать";
+            this.DynObjectsCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DynObjectsCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DynObjectsCloneButton.UseVisualStyleBackColor = true;
+            this.DynObjectsCloneButton.Click += new System.EventHandler(this.DClone_button_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(74, 22);
+            this.toolStripButton3.Text = "Экспорт";
+            this.toolStripButton3.ToolTipText = "Export";
+            this.toolStripButton3.Click += new System.EventHandler(this.ExportExistence_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(71, 22);
+            this.toolStripButton4.Text = "Импорт";
+            this.toolStripButton4.ToolTipText = "Import";
+            this.toolStripButton4.Click += new System.EventHandler(this.ImportExistence_Click);
+            // 
+            // toolStripDropDownButton3
+            // 
+            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem7,
+            this.toolStripMenuItem8});
+            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
+            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(95, 22);
+            this.toolStripDropDownButton3.Text = "Выстроить";
+            this.toolStripDropDownButton3.ToolTipText = "Line up";
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem7.Image")));
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(100, 22);
+            this.toolStripMenuItem7.Text = "По X";
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.LineUpX_Click);
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem8.Image")));
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(100, 22);
+            this.toolStripMenuItem8.Text = "По Z";
+            this.toolStripMenuItem8.Click += new System.EventHandler(this.LineUpZ_Click);
+            // 
+            // toolStripDropDownButton4
+            // 
+            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem9,
+            this.toolStripMenuItem10});
+            this.toolStripDropDownButton4.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
+            this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
+            this.toolStripDropDownButton4.Size = new System.Drawing.Size(108, 22);
+            this.toolStripDropDownButton4.Text = "Переместить";
+            this.toolStripDropDownButton4.ToolTipText = "Move";
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem9.Image")));
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(159, 22);
+            this.toolStripMenuItem9.Text = "Выше   Shift+W";
+            this.toolStripMenuItem9.Click += new System.EventHandler(this.UpObjects);
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem10.Image")));
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(159, 22);
+            this.toolStripMenuItem10.Text = "Ниже    Shift+S";
+            this.toolStripMenuItem10.Click += new System.EventHandler(this.DownObjects);
+            // 
+            // GotoDynamicsContacts
+            // 
+            this.GotoDynamicsContacts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GotoDynamicsContacts.ForeColor = System.Drawing.Color.Black;
+            this.GotoDynamicsContacts.Image = ((System.Drawing.Image)(resources.GetObject("GotoDynamicsContacts.Image")));
+            this.GotoDynamicsContacts.Location = new System.Drawing.Point(1, 211);
+            this.GotoDynamicsContacts.Name = "GotoDynamicsContacts";
+            this.GotoDynamicsContacts.Size = new System.Drawing.Size(196, 57);
+            this.GotoDynamicsContacts.TabIndex = 27;
+            this.GotoDynamicsContacts.Text = "Перейти к выбранному";
+            this.GotoDynamicsContacts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.GotoDynamicsContacts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.GotoDynamicsContacts.UseVisualStyleBackColor = true;
+            this.GotoDynamicsContacts.Click += new System.EventHandler(this.GotoDynamicsContacts_Click);
+            // 
+            // GotoResourcesContacts
+            // 
+            this.GotoResourcesContacts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GotoResourcesContacts.ForeColor = System.Drawing.Color.Black;
+            this.GotoResourcesContacts.Image = ((System.Drawing.Image)(resources.GetObject("GotoResourcesContacts.Image")));
+            this.GotoResourcesContacts.Location = new System.Drawing.Point(1, 211);
+            this.GotoResourcesContacts.Name = "GotoResourcesContacts";
+            this.GotoResourcesContacts.Size = new System.Drawing.Size(196, 57);
+            this.GotoResourcesContacts.TabIndex = 27;
+            this.GotoResourcesContacts.Text = "Перейти к выбранному";
+            this.GotoResourcesContacts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.GotoResourcesContacts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.GotoResourcesContacts.UseVisualStyleBackColor = true;
+            this.GotoResourcesContacts.Click += new System.EventHandler(this.GotoResourcesContacts_Click);
+            // 
+            // GotoNpcMobsContacts
+            // 
+            this.GotoNpcMobsContacts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GotoNpcMobsContacts.ForeColor = System.Drawing.Color.Black;
+            this.GotoNpcMobsContacts.Image = ((System.Drawing.Image)(resources.GetObject("GotoNpcMobsContacts.Image")));
+            this.GotoNpcMobsContacts.Location = new System.Drawing.Point(1, 211);
+            this.GotoNpcMobsContacts.Name = "GotoNpcMobsContacts";
+            this.GotoNpcMobsContacts.Size = new System.Drawing.Size(196, 57);
+            this.GotoNpcMobsContacts.TabIndex = 27;
+            this.GotoNpcMobsContacts.Text = "Перейти к выбранному";
+            this.GotoNpcMobsContacts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.GotoNpcMobsContacts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.GotoNpcMobsContacts.UseVisualStyleBackColor = true;
+            this.GotoNpcMobsContacts.Click += new System.EventHandler(this.GotoNpcMobsContacts_Click);
+            // 
+            // DeleteEmptyTrigger
+            // 
+            this.DeleteEmptyTrigger.Image = ((System.Drawing.Image)(resources.GetObject("DeleteEmptyTrigger.Image")));
+            this.DeleteEmptyTrigger.Name = "DeleteEmptyTrigger";
+            this.DeleteEmptyTrigger.Size = new System.Drawing.Size(214, 22);
+            this.DeleteEmptyTrigger.Text = "Удалить пустые триггеры";
+            this.DeleteEmptyTrigger.Click += new System.EventHandler(this.DeleteEmptyTrigger_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.UpTrigger,
+            this.DownTrigger});
+            this.toolStripMenuItem4.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(214, 22);
+            this.toolStripMenuItem4.Text = "Переместить";
+            // 
+            // UpTrigger
+            // 
+            this.UpTrigger.Image = ((System.Drawing.Image)(resources.GetObject("UpTrigger.Image")));
+            this.UpTrigger.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.UpTrigger.Name = "UpTrigger";
+            this.UpTrigger.Size = new System.Drawing.Size(107, 22);
+            this.UpTrigger.Text = "Выше";
+            this.UpTrigger.Click += new System.EventHandler(this.UpObjects);
+            // 
+            // DownTrigger
+            // 
+            this.DownTrigger.Image = ((System.Drawing.Image)(resources.GetObject("DownTrigger.Image")));
+            this.DownTrigger.Name = "DownTrigger";
+            this.DownTrigger.Size = new System.Drawing.Size(107, 22);
+            this.DownTrigger.Text = "Ниже";
+            this.DownTrigger.Click += new System.EventHandler(this.DownObjects);
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.Image = global::NpcGenDataEditorByLuka.Properties.Resources.document_export;
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(214, 22);
+            this.toolStripMenuItem12.Text = "Экспорт";
+            this.toolStripMenuItem12.Click += new System.EventHandler(this.ExportExistence_Click);
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Image = global::NpcGenDataEditorByLuka.Properties.Resources.import;
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(214, 22);
+            this.toolStripMenuItem11.Text = "Импорт";
+            this.toolStripMenuItem11.Click += new System.EventHandler(this.ImportExistence_Click);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(74, 22);
+            this.toolStripButton5.Text = "Экспорт";
+            this.toolStripButton5.ToolTipText = "Export";
+            this.toolStripButton5.Click += new System.EventHandler(this.ExportExistence_Click);
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(71, 22);
+            this.toolStripButton6.Text = "Импорт";
+            this.toolStripButton6.ToolTipText = "Import";
+            this.toolStripButton6.Click += new System.EventHandler(this.ImportExistence_Click);
+            // 
+            // toolStripDropDownButton6
+            // 
+            this.toolStripDropDownButton6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem13,
+            this.toolStripMenuItem14});
+            this.toolStripDropDownButton6.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Move;
+            this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
+            this.toolStripDropDownButton6.Size = new System.Drawing.Size(108, 22);
+            this.toolStripDropDownButton6.Text = "Переместить";
+            this.toolStripDropDownButton6.ToolTipText = "Move";
+            // 
+            // toolStripMenuItem13
+            // 
+            this.toolStripMenuItem13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem13.Image")));
+            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(159, 22);
+            this.toolStripMenuItem13.Text = "Выше   Shift+W";
+            this.toolStripMenuItem13.Click += new System.EventHandler(this.UpObjects);
+            // 
+            // toolStripMenuItem14
+            // 
+            this.toolStripMenuItem14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem14.Image")));
+            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(159, 22);
+            this.toolStripMenuItem14.Text = "Ниже    Shift+S";
+            this.toolStripMenuItem14.Click += new System.EventHandler(this.DownObjects);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.Image = global::NpcGenDataEditorByLuka.Properties.Resources.remove;
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(79, 22);
+            this.toolStripButton7.Text = "Очистить";
+            this.toolStripButton7.ToolTipText = "Russian-: Удалить пустые триггеры\r\nEnglish-: Remove empty triggers";
+            this.toolStripButton7.Click += new System.EventHandler(this.DeleteEmptyTrigger_Click);
+            // 
+            // TriggersRemoveButton
+            // 
+            this.TriggersRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.TriggersRemoveButton.ForeColor = System.Drawing.Color.Black;
+            this.TriggersRemoveButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.remove;
+            this.TriggersRemoveButton.Location = new System.Drawing.Point(180, 454);
+            this.TriggersRemoveButton.Name = "TriggersRemoveButton";
+            this.TriggersRemoveButton.Size = new System.Drawing.Size(181, 29);
+            this.TriggersRemoveButton.TabIndex = 21;
+            this.TriggersRemoveButton.Text = "Удалить";
+            this.TriggersRemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TriggersRemoveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.TriggersRemoveButton.UseVisualStyleBackColor = true;
+            this.TriggersRemoveButton.Click += new System.EventHandler(this.DeleteTrigger_Click);
+            // 
+            // TriggersCloneButton
+            // 
+            this.TriggersCloneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.TriggersCloneButton.ForeColor = System.Drawing.Color.Black;
+            this.TriggersCloneButton.Image = global::NpcGenDataEditorByLuka.Properties.Resources.Clone;
+            this.TriggersCloneButton.Location = new System.Drawing.Point(0, 454);
+            this.TriggersCloneButton.Name = "TriggersCloneButton";
+            this.TriggersCloneButton.Size = new System.Drawing.Size(181, 29);
+            this.TriggersCloneButton.TabIndex = 20;
+            this.TriggersCloneButton.Text = "Клонировать";
+            this.TriggersCloneButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TriggersCloneButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.TriggersCloneButton.UseVisualStyleBackColor = true;
+            this.TriggersCloneButton.Click += new System.EventHandler(this.CloneTrigger_Click);
+            // 
+            // MoveToSelected
+            // 
+            this.MoveToSelected.Image = ((System.Drawing.Image)(resources.GetObject("MoveToSelected.Image")));
+            this.MoveToSelected.Name = "MoveToSelected";
+            this.MoveToSelected.Size = new System.Drawing.Size(204, 22);
+            this.MoveToSelected.Text = "Перейти к выбранному";
+            this.MoveToSelected.Click += new System.EventHandler(this.MoveToSelected_Click);
+            // 
+            // TriggerSearchButton
+            // 
+            this.TriggerSearchButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TriggerSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TriggerSearchButton.ForeColor = System.Drawing.Color.Black;
+            this.TriggerSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("TriggerSearchButton.Image")));
+            this.TriggerSearchButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.TriggerSearchButton.Location = new System.Drawing.Point(1, 107);
+            this.TriggerSearchButton.Name = "TriggerSearchButton";
+            this.TriggerSearchButton.Size = new System.Drawing.Size(234, 45);
+            this.TriggerSearchButton.TabIndex = 31;
+            this.TriggerSearchButton.Text = "Найти";
+            this.TriggerSearchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TriggerSearchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.TriggerSearchButton.UseVisualStyleBackColor = true;
+            this.TriggerSearchButton.Click += new System.EventHandler(this.TriggerSearchButton_Click);
+            // 
+            // DynamicSearchButton
+            // 
+            this.DynamicSearchButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.DynamicSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DynamicSearchButton.ForeColor = System.Drawing.Color.Black;
+            this.DynamicSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("DynamicSearchButton.Image")));
+            this.DynamicSearchButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.DynamicSearchButton.Location = new System.Drawing.Point(0, 107);
+            this.DynamicSearchButton.Name = "DynamicSearchButton";
+            this.DynamicSearchButton.Size = new System.Drawing.Size(234, 45);
+            this.DynamicSearchButton.TabIndex = 30;
+            this.DynamicSearchButton.Text = "Найти";
+            this.DynamicSearchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DynamicSearchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DynamicSearchButton.UseVisualStyleBackColor = true;
+            this.DynamicSearchButton.Click += new System.EventHandler(this.DynamicSearchButton_Click);
+            // 
+            // ResourceSearchButton
+            // 
+            this.ResourceSearchButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ResourceSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ResourceSearchButton.ForeColor = System.Drawing.Color.Black;
+            this.ResourceSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourceSearchButton.Image")));
+            this.ResourceSearchButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ResourceSearchButton.Location = new System.Drawing.Point(1, 107);
+            this.ResourceSearchButton.Name = "ResourceSearchButton";
+            this.ResourceSearchButton.Size = new System.Drawing.Size(234, 45);
+            this.ResourceSearchButton.TabIndex = 29;
+            this.ResourceSearchButton.Text = "Найти";
+            this.ResourceSearchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ResourceSearchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ResourceSearchButton.UseVisualStyleBackColor = true;
+            this.ResourceSearchButton.Click += new System.EventHandler(this.ResourceSearchButton_Click);
+            // 
+            // ExistenceSearchButton
+            // 
+            this.ExistenceSearchButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ExistenceSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExistenceSearchButton.ForeColor = System.Drawing.Color.Black;
+            this.ExistenceSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("ExistenceSearchButton.Image")));
+            this.ExistenceSearchButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ExistenceSearchButton.Location = new System.Drawing.Point(0, 107);
+            this.ExistenceSearchButton.Name = "ExistenceSearchButton";
+            this.ExistenceSearchButton.Size = new System.Drawing.Size(234, 45);
+            this.ExistenceSearchButton.TabIndex = 28;
+            this.ExistenceSearchButton.Text = "Найти";
+            this.ExistenceSearchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ExistenceSearchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ExistenceSearchButton.UseVisualStyleBackColor = true;
+            this.ExistenceSearchButton.Click += new System.EventHandler(this.ExistenceSearchButton_Click);
+            // 
+            // RemoveAllErrors
+            // 
+            this.RemoveAllErrors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.RemoveAllErrors.ForeColor = System.Drawing.Color.Black;
+            this.RemoveAllErrors.Image = ((System.Drawing.Image)(resources.GetObject("RemoveAllErrors.Image")));
+            this.RemoveAllErrors.Location = new System.Drawing.Point(187, 428);
+            this.RemoveAllErrors.Name = "RemoveAllErrors";
+            this.RemoveAllErrors.Size = new System.Drawing.Size(249, 54);
+            this.RemoveAllErrors.TabIndex = 18;
+            this.RemoveAllErrors.Text = "Удалить все объекты";
+            this.RemoveAllErrors.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RemoveAllErrors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.RemoveAllErrors.UseVisualStyleBackColor = true;
+            this.RemoveAllErrors.Click += new System.EventHandler(this.RemoveAllErrors_Click);
+            // 
+            // SearchErrorsButton
+            // 
+            this.SearchErrorsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.SearchErrorsButton.ForeColor = System.Drawing.Color.Black;
+            this.SearchErrorsButton.Image = ((System.Drawing.Image)(resources.GetObject("SearchErrorsButton.Image")));
+            this.SearchErrorsButton.Location = new System.Drawing.Point(0, 428);
+            this.SearchErrorsButton.Name = "SearchErrorsButton";
+            this.SearchErrorsButton.Size = new System.Drawing.Size(186, 54);
+            this.SearchErrorsButton.TabIndex = 17;
+            this.SearchErrorsButton.Text = "Найти ошибки";
+            this.SearchErrorsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SearchErrorsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SearchErrorsButton.UseVisualStyleBackColor = true;
+            this.SearchErrorsButton.Click += new System.EventHandler(this.SearchErrorsButton_Click);
+            // 
+            // Clear
+            // 
+            this.Clear.BackColor = System.Drawing.Color.Transparent;
+            this.Clear.Checked = true;
+            this.Clear.ForeColor = System.Drawing.Color.Black;
+            this.Clear.Image = ((System.Drawing.Image)(resources.GetObject("Clear.Image")));
+            this.Clear.Location = new System.Drawing.Point(10, 19);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(85, 24);
+            this.Clear.TabIndex = 59;
+            this.Clear.TabStop = true;
+            this.Clear.Text = "Clear";
+            this.Clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.CheckedChanged += new System.EventHandler(this.InterfaceColorChanged);
+            // 
+            // Dark
+            // 
+            this.Dark.BackColor = System.Drawing.Color.Transparent;
+            this.Dark.ForeColor = System.Drawing.Color.Black;
+            this.Dark.Image = ((System.Drawing.Image)(resources.GetObject("Dark.Image")));
+            this.Dark.Location = new System.Drawing.Point(10, 42);
+            this.Dark.Name = "Dark";
+            this.Dark.Size = new System.Drawing.Size(79, 24);
+            this.Dark.TabIndex = 60;
+            this.Dark.Text = "Dark";
+            this.Dark.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Dark.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Dark.UseVisualStyleBackColor = false;
+            this.Dark.CheckedChanged += new System.EventHandler(this.InterfaceColorChanged);
+            // 
+            // Russian
+            // 
+            this.Russian.BackColor = System.Drawing.SystemColors.Control;
+            this.Russian.Checked = true;
+            this.Russian.ForeColor = System.Drawing.Color.Black;
+            this.Russian.Image = ((System.Drawing.Image)(resources.GetObject("Russian.Image")));
+            this.Russian.Location = new System.Drawing.Point(10, 19);
+            this.Russian.Name = "Russian";
+            this.Russian.Size = new System.Drawing.Size(85, 24);
+            this.Russian.TabIndex = 59;
+            this.Russian.TabStop = true;
+            this.Russian.Text = "Russian";
+            this.Russian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Russian.UseVisualStyleBackColor = false;
+            this.Russian.CheckedChanged += new System.EventHandler(this.ChangeLanguage);
+            // 
+            // English
+            // 
+            this.English.BackColor = System.Drawing.SystemColors.Control;
+            this.English.ForeColor = System.Drawing.Color.Black;
+            this.English.Image = ((System.Drawing.Image)(resources.GetObject("English.Image")));
+            this.English.Location = new System.Drawing.Point(10, 42);
+            this.English.Name = "English";
+            this.English.Size = new System.Drawing.Size(79, 24);
+            this.English.TabIndex = 60;
+            this.English.Text = "English";
+            this.English.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.English.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.English.UseVisualStyleBackColor = false;
+            this.English.CheckedChanged += new System.EventHandler(this.ChangeLanguage);
+            // 
+            // ConvertAndSaveButton
+            // 
+            this.ConvertAndSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConvertAndSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.ConvertAndSaveButton.ForeColor = System.Drawing.Color.Black;
+            this.ConvertAndSaveButton.Image = ((System.Drawing.Image)(resources.GetObject("ConvertAndSaveButton.Image")));
+            this.ConvertAndSaveButton.Location = new System.Drawing.Point(175, 423);
+            this.ConvertAndSaveButton.Name = "ConvertAndSaveButton";
+            this.ConvertAndSaveButton.Size = new System.Drawing.Size(207, 60);
+            this.ConvertAndSaveButton.TabIndex = 17;
+            this.ConvertAndSaveButton.Text = "Конвертировать в     версию и сохранить";
+            this.ConvertAndSaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ConvertAndSaveButton.UseVisualStyleBackColor = true;
+            this.ConvertAndSaveButton.Click += new System.EventHandler(this.ConvertAndSaveButton_Click);
+            // 
+            // SaveFile
+            // 
+            this.SaveFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.SaveFile.ForeColor = System.Drawing.Color.Black;
+            this.SaveFile.Image = ((System.Drawing.Image)(resources.GetObject("SaveFile.Image")));
+            this.SaveFile.Location = new System.Drawing.Point(3, 423);
+            this.SaveFile.Name = "SaveFile";
+            this.SaveFile.Size = new System.Drawing.Size(169, 60);
+            this.SaveFile.TabIndex = 7;
+            this.SaveFile.Text = "Сохранить Npcgen.data";
+            this.SaveFile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SaveFile.UseVisualStyleBackColor = true;
+            this.SaveFile.Click += new System.EventHandler(this.SaveFile_Click);
+            // 
             // OpenFiles
             // 
             this.OpenFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -6275,24 +6294,6 @@
             this.Search_element.TabStop = false;
             this.Search_element.UseVisualStyleBackColor = false;
             this.Search_element.Click += new System.EventHandler(this.SearchElementButton);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(156, 6);
-            // 
-            // вНачалоToolStripMenuItem
-            // 
-            this.вНачалоToolStripMenuItem.Name = "вНачалоToolStripMenuItem";
-            this.вНачалоToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.вНачалоToolStripMenuItem.Text = "В начало";
-            // 
-            // ExistenceToEnd
-            // 
-            this.ExistenceToEnd.Name = "ExistenceToEnd";
-            this.ExistenceToEnd.Size = new System.Drawing.Size(159, 22);
-            this.ExistenceToEnd.Text = "В конец";
-            this.ExistenceToEnd.Click += new System.EventHandler(this.ExistenceToEnd_Click);
             // 
             // Form1
             // 
@@ -6381,7 +6382,6 @@
             this.toolStrip1.PerformLayout();
             this.DynObjectsTab.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DynamicPictureBox)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox10.ResumeLayout(false);
@@ -6427,6 +6427,7 @@
             this.groupBox22.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DynamicPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
