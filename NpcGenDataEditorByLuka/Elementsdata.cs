@@ -9,7 +9,7 @@ using NpcGenDataEditorByLuka.sELedit;
 
 namespace NpcGenDataEditorByLuka
 {
-    internal class Elementsdata
+    public class Elementsdata
     {
         public int MonsterdAmount = 0;
 

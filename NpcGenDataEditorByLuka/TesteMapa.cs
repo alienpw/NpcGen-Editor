@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraBars;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,8 +15,10 @@ namespace NpcGenDataEditorByLuka
 {
     public partial class TesteMapa : Form
     {
-        Form1 mainForm;
+        public Form1 mainForm;
         PointF point;
+        PointF pointAdd;
+
         public TesteMapa(Form1 form, Bitmap img)
         {
             mainForm = form;
@@ -66,6 +69,7 @@ namespace NpcGenDataEditorByLuka
                     double cx = pos_x / 10 - 9.6;
                     double cy = 1113.2 - (pos_y / 10);
                     text = string.Format("X: {0} | Y: {1}\nCX: {2} | CY: {3}\nMapa Principal", posx, posy, cx, cy);
+                    pointAdd = new PointF(posx, posy);
                 }
                 else
                 {
@@ -74,6 +78,7 @@ namespace NpcGenDataEditorByLuka
                     double cx = numx / 10 - 9.6;
                     double cy = 1113.2 - (numy / 10);
                     text = string.Format("X: {0} | Y: {1}\nCX: {2} | CY: {3}\nInstância", numx, numy, cx, cy);
+                    pointAdd = new PointF(numx, numy);
                 }
 
                 if (text != toolTip.GetToolTip(pictureBox_path))
@@ -95,15 +100,23 @@ namespace NpcGenDataEditorByLuka
 
         private void pictureBox_path_MouseClick(object sender, MouseEventArgs e)
         {
-            if (e.Button== MouseButtons.Right)
-            {
-                DrawPoint();
-            }
+            
         }
 
         private void TesteMapa_KeyDown(object sender, KeyEventArgs e)
         {
             
+        }
+
+        void OpenAddFromMap(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var s = sender as BarManager;
+            new AddFromMap(this, e.Item.Id, pointAdd).ShowDialog();
+        }
+
+        private void barButtonItem2_DefaultDropDownLinkChanged(object sender, DefaultDropDownLinkChangedEventArgs e)
+        {
+
         }
     }
 }
