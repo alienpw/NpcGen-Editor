@@ -24,3 +24,16 @@ C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin
 C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\x86\Debug\Dropbox.Api.xml
 C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\bin\x86\Debug\Newtonsoft.Json.xml
 C:\Users\Luka\Desktop\Projects\NpcGenDataEditorByLuka\NpcGenDataEditorByLuka\obj\x86\Debug\NpcGenDataEditorByLuka.csproj.CoreCompileInputs.cache
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\NpcGenDataEditorByLuka.csproj.AssemblyReference.cache
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\NpcGenDataEditorByLuka.csproj.SuggestedBindingRedirects.cache
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\NpcGenDataEditorByLuka.DynamicObjectsForm.resources
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\NpcGenDataEditorByLuka.Form1.resources
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\NpcGenDataEditorByLuka.Main.resources
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\NpcGenDataEditorByLuka.MobsNpcsForm.resources
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\NpcGenDataEditorByLuka.Properties.Resources.resources
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\NpcGenDataEditorByLuka.ShowLocationWindow.resources
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\NpcGenDataEditorByLuka.csproj.GenerateResource.cache
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\Npcgen Editor By Luka.exe.licenses
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\NpcGenDataEditorByLuka.csproj.CoreCompileInputs.cache
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\Npcgen Editor By Luka.exe
+D:\Perfect World\Tools Criadas Alien C#\NpcGenDataEditorByLuka\obj\x86\Debug\Npcgen Editor By Luka.pdb

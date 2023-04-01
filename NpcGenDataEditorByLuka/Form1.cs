@@ -12,7 +12,6 @@ using System.Xml;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Threading;
-using LBLIBRARY;
 namespace NpcGenDataEditorByLuka
 {
     public partial class Form1 : Form
