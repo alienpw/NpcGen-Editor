@@ -1,9 +1,4 @@
-﻿using DevExpress.ClipboardSource.SpreadsheetML;
-using DevExpress.Xpo.DB;
-using DevExpress.XtraBars;
-using DevExpress.XtraEditors;
-using DevExpress.XtraPrinting.Export.Pdf;
-using DevExpress.XtraPrinting.Native;
+﻿using DevExpress.XtraEditors;
 using NpcGenEditor.Classes;
 using NpcGenEditor.DDSReader;
 using NpcGenEditor.Elements;
@@ -11,19 +6,15 @@ using NpcGenEditor.PCKEngine;
 using NpcGenEditor.Properties;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static DevExpress.Utils.Frames.FrameHelper;
-using static System.Collections.Specialized.BitVector32;
+using Extensions = NpcGenEditor.Classes.Extensions;
 
 namespace NpcGenEditor
 {
@@ -43,6 +34,7 @@ namespace NpcGenEditor
         public static SortedList<int, ImagePosition> imageposition_m;
         public static SortedDictionary<string, Bitmap> imagesCache_m = new SortedDictionary<string, Bitmap>();
         public SortedList<int, string> listMonster = new SortedList<int, string>();
+        public SortedList<int, string> listNpc = new SortedList<int, string>();
         public static Bitmap iconlist_ivtrm { get; set; }
         public static bool loadedData = false;
         public static bool loadedPck = false;
@@ -117,6 +109,23 @@ namespace NpcGenEditor
                         {
                             MessageBox.Show("Error: Found duplicate Monster ID:" + id);
                             listMonster[id] = name;
+                        }
+                    }
+                }
+                if (eLC.Lists[57].elementFields[1] == "Name")
+                {
+                    for (int i = 0; i < eLC.Lists[57].elementValues.Length; i++)
+                    {
+                        int id = int.Parse(eLC.GetValue(57, i, 0));
+                        string name = eLC.GetValue(57, i, 1);
+                        if (!listNpc.ContainsKey(id))
+                        {
+                            listNpc.Add(id, name);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error: Found duplicate Npc ID:" + id);
+                            listNpc[id] = name;
                         }
                     }
                 }
@@ -412,33 +421,24 @@ namespace NpcGenEditor
                     if (MapForm == null)
                     {
                         MapForm = new MapWindow();
-                        Cursor = Cursors.AppStarting;
                         MapForm.pictureBox1.BackgroundImage = bm;
                         MapForm.pictureBox1.Width = MapForm.pictureBox1.BackgroundImage.Width;
                         MapForm.pictureBox1.Height = MapForm.pictureBox1.BackgroundImage.Height;
-                        GC.Collect();
-                        Cursor = Cursors.Default;
                         MapForm.Show(this);
                     }
                     else if (MapForm.Visible == false)
                     {
                         MapForm = new MapWindow();
-                        Cursor = Cursors.AppStarting;
                         MapForm.pictureBox1.BackgroundImage = bm;
                         MapForm.pictureBox1.Width = MapForm.pictureBox1.BackgroundImage.Width;
                         MapForm.pictureBox1.Height = MapForm.pictureBox1.BackgroundImage.Height;
-                        GC.Collect();
-                        Cursor = Cursors.Default;
                         MapForm.Show(this);
                     }
                     else
                     {
-                        Cursor = Cursors.AppStarting;
                         MapForm.pictureBox1.BackgroundImage = bm;
                         MapForm.pictureBox1.Width = MapForm.pictureBox1.BackgroundImage.Width;
                         MapForm.pictureBox1.Height = MapForm.pictureBox1.BackgroundImage.Height;
-                        GC.Collect();
-                        Cursor = Cursors.Default;
                     }
                 }));
             }
@@ -452,7 +452,7 @@ namespace NpcGenEditor
         {
             var item = e.Value as ClassDefaultMonsters;
             e.TemplatedItem["id"].Text = item.MobDops[0].Id.ToString();
-            e.TemplatedItem["name"].Text = listMonster.TryGetValue(item.MobDops[0].Id, out string value) ? value : "[?]";
+            e.TemplatedItem["name"].Text = listMonster.TryGetValue(item.MobDops[0].Id, out string value) ? "<color=#00d6d6>" + value : listNpc.TryGetValue(item.MobDops[0].Id, out value) ? "<color=#fc7e00>" + value : "[?]";
         }
 
         void UpdateTable()
@@ -571,6 +571,19 @@ namespace NpcGenEditor
                 System.Threading.Thread th = new System.Threading.Thread(() => LinkMaps(Maps[SelectedIndex].MapFragments, Maps[SelectedIndex].MapName));
                 th.Start();
             }
+        }
+
+        private void listnpcmob_Click(object sender, EventArgs e)
+        {
+            if (listnpcmob.SelectedIndex == -1) return;
+            var npcmob = listnpcmob.SelectedItem as ClassDefaultMonsters;
+            if (MapForm != null)
+            {
+                MapForm.GetCoordinates(new List<PointF> { new PointF(npcmob.X_position, npcmob.Z_position) }, Extensions.ReturnAnglePosition(npcmob.X_direction, npcmob.Y_direction, npcmob.Z_direction));
+            }
+            npcmobposx.Text = npcmob.X_position.ToString("f6");
+            npcmobposy.Text = npcmob.Y_position.ToString("f6");
+            npcmobposz.Text = npcmob.Z_position.ToString("f6");
         }
     }
 }

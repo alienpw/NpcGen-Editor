@@ -150,6 +150,7 @@
   <ItemGroup>
     <Content Include="DDSReader\DDSReader.mdp" />
     <Content Include="DDSReader\DDSReader.xml" />
+    <None Include="Resources\gota.png" />
     <None Include="Resources\npc.png" />
     <None Include="Resources\blank.png" />
     <None Include="Resources\blank.ico" />

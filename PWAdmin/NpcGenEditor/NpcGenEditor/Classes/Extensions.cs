@@ -238,7 +238,7 @@ namespace NpcGenEditor.Classes
             uint minutes = time / 60;
             uint seconds = time - (minutes * 60);
             if (time1 < 60) result = seconds.ToString() + "s";
-            if (time1 >= 60 && time1 < 3600) result = minutes.ToString() + "m" + (seconds == 0 ? string.Empty :  " " + seconds.ToString() + "s");
+            if (time1 >= 60 && time1 < 3600) result = minutes.ToString() + "m" + (seconds == 0 ? string.Empty : " " + seconds.ToString() + "s");
             if (time1 >= 3600) result = hours.ToString() + "h" + (minutes == 0 ? string.Empty : " " + minutes.ToString() + "m");
             return result;
         }
@@ -473,6 +473,66 @@ namespace NpcGenEditor.Classes
 
             }
             return destImage;
+        }
+
+        public static Bitmap RotateImage(Bitmap b, float angle)
+        {
+            //create a new empty bitmap to hold rotated image
+            Bitmap returnBitmap = new Bitmap(b.Width, b.Height);
+            //make a graphics object from the empty bitmap
+            using (Graphics g = Graphics.FromImage(returnBitmap))
+            {
+                //move rotation point to center of image
+                g.TranslateTransform((float)b.Width / 2, (float)b.Height / 2);
+                //rotate
+                g.RotateTransform(angle);
+                //move image back
+                g.TranslateTransform(-(float)b.Width / 2, -(float)b.Height / 2);
+                //draw passed in image onto graphics object
+                g.DrawImage(b, new Point(0, 0));
+                returnBitmap.SetResolution(96, 96);
+            }
+            return returnBitmap;
+        }
+
+        public static float ReturnAnglePosition(float x, float y, float z)
+        {
+            float vx = (float)Math.Round(x, 1, MidpointRounding.AwayFromZero);
+            float vy = (float)Math.Round(y, 1, MidpointRounding.AwayFromZero);
+            float vz = (float)Math.Round(z, 1, MidpointRounding.AwayFromZero);
+            if ((vx > -0.5f && vx < 0.5f) && (vy >= 0.0f && vy < 0.5f) && (vz >= 0.5f && vz < 1.0f))
+            {
+                return 0f;
+            }
+            else if ((vx >= 0.5f && vx < 1.0f) && (vy > -0.5f && vy < 0.5f) && (vz >= 0.5f && vz < 1.0f))
+            {
+                return 45f;
+            }
+            else if ((vx >= 0.5f && vx < 1.0f) && (vy > -0.5f && vy < 0.5f) && (vz > -0.5f && vz < 0.5f))
+            {
+                return 90f;
+            }
+            else if ((vx >= 0.5f && vx < 1.0f) && (vy > -0.5f && vy < 0.5f) && (vz <= -0.5f && vz > -1.0f))
+            {
+                return 135f;
+            }
+            else if ((vx > -0.5f && vx < 0.5f) && (vy > -0.5f && vy < 0.5f) && (vz < -0.5f && vz >= -1.0f))
+            {
+                return 180f;
+            }
+            else if ((vx <= -0.5f && vx > 1.0f) && (vy > -0.5f && vy < 0.5f) && (vz <= -0.5f && vz > 1.0f))
+            {
+                return 225f;
+            }
+            else if ((vx <= -0.5f && vx > 1.0f) && (vy > -0.5f && vy < 0.5f) && (vz > -0.5f && vz < 0.5f))
+            {
+                return 270f;
+            }
+            else if ((vx <= -0.5f && vx > 1.0f) && (vy > -0.5f && vy < 0.5f) && (vz >= -0.5f && vz < 0.5f))
+            {
+                return 315f;
+            }
+            else return 0f;
         }
 
     }

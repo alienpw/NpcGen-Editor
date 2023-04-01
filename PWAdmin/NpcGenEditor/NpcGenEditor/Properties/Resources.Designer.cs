@@ -103,6 +103,16 @@ namespace NpcGenEditor.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gota {
+            get {
+                object obj = ResourceManager.GetObject("gota", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap npc {
             get {
                 object obj = ResourceManager.GetObject("npc", resourceCulture);

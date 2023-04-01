@@ -69,6 +69,12 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.npcmobposz = new DevExpress.XtraEditors.TextEdit();
+            this.npcmobposy = new DevExpress.XtraEditors.TextEdit();
+            this.npcmobposx = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -99,6 +105,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.npcmobposz.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npcmobposy.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npcmobposx.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
@@ -318,6 +327,7 @@
             // 
             // listnpcmob
             // 
+            this.listnpcmob.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
             this.listnpcmob.IncrementalSearch = true;
             this.listnpcmob.ItemHeight = 19;
             this.listnpcmob.Location = new System.Drawing.Point(2, 2);
@@ -353,8 +363,10 @@
             tableRowDefinition1.Length.Value = 15D;
             itemTemplateBase1.Rows.Add(tableRowDefinition1);
             this.listnpcmob.Templates.Add(itemTemplateBase1);
+            this.listnpcmob.SelectedIndexChanged += new System.EventHandler(this.listnpcmob_Click);
             this.listnpcmob.CustomizeItem += new DevExpress.XtraEditors.CustomizeTemplatedItemEventHandler(this.listnpcmob_CustomizeItem);
             this.listnpcmob.ParseSearchControlText += new System.EventHandler<DevExpress.XtraEditors.ParseSearchControlTextEventArgs>(this.listnpcmob_ParseSearchControlText);
+            this.listnpcmob.Click += new System.EventHandler(this.listnpcmob_Click);
             // 
             // layoutControl1
             // 
@@ -447,10 +459,61 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.labelControl3);
+            this.xtraTabPage1.Controls.Add(this.labelControl2);
+            this.xtraTabPage1.Controls.Add(this.labelControl1);
+            this.xtraTabPage1.Controls.Add(this.npcmobposz);
+            this.xtraTabPage1.Controls.Add(this.npcmobposy);
+            this.xtraTabPage1.Controls.Add(this.npcmobposx);
             this.xtraTabPage1.Controls.Add(this.groupControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(911, 340);
             this.xtraTabPage1.Text = "Npc/Mob";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(311, 137);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(26, 13);
+            this.labelControl3.TabIndex = 8;
+            this.labelControl3.Text = "Pos Z";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(311, 111);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(26, 13);
+            this.labelControl2.TabIndex = 8;
+            this.labelControl2.Text = "Pos Y";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(311, 85);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(26, 13);
+            this.labelControl1.TabIndex = 8;
+            this.labelControl1.Text = "Pos X";
+            // 
+            // npcmobposz
+            // 
+            this.npcmobposz.Location = new System.Drawing.Point(343, 134);
+            this.npcmobposz.Name = "npcmobposz";
+            this.npcmobposz.Size = new System.Drawing.Size(100, 20);
+            this.npcmobposz.TabIndex = 7;
+            // 
+            // npcmobposy
+            // 
+            this.npcmobposy.Location = new System.Drawing.Point(343, 108);
+            this.npcmobposy.Name = "npcmobposy";
+            this.npcmobposy.Size = new System.Drawing.Size(100, 20);
+            this.npcmobposy.TabIndex = 7;
+            // 
+            // npcmobposx
+            // 
+            this.npcmobposx.Location = new System.Drawing.Point(343, 82);
+            this.npcmobposx.Name = "npcmobposx";
+            this.npcmobposx.Size = new System.Drawing.Size(100, 20);
+            this.npcmobposx.TabIndex = 7;
             // 
             // groupControl1
             // 
@@ -513,6 +576,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
+            this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.npcmobposz.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npcmobposy.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npcmobposx.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -554,5 +621,11 @@
         private DevExpress.XtraEditors.ComboBoxEdit cbMaps;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit npcmobposy;
+        private DevExpress.XtraEditors.TextEdit npcmobposx;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.TextEdit npcmobposz;
     }
 }

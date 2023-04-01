@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.ButtonPanel;
 using NpcGenEditor.Classes;
 using NpcGenEditor.Properties;
 using System;
@@ -17,38 +18,39 @@ namespace NpcGenEditor
 {
     public partial class MapWindow : DevExpress.XtraEditors.XtraForm
     {
+        PointF location;
+
         public MapWindow()
         {
             InitializeComponent();
             pictureBox1.Image = new Bitmap(pictureBox1.Width, pictureBox1.Height);
         }
 
-        private void path_drawBackground(Image img)
+        public void GetCoordinates(List<PointF> ls, float angle)
         {
-
-        }
-
-
-        public void GetCoordinates(List<PointF> ls)
-        {
-            Graphics g = Graphics.FromImage(pictureBox1.Image);
+            //Graphics g = Graphics.FromImage(pictureBox1.BackgroundImage);
             int z = 1;
-            if (pictureBox1.Image.Size != new Size(8192, 11264))
+            if (pictureBox1.BackgroundImage.Size != new Size(8192, 11264))
                 z = 2;
             foreach (var item in ls)
             {
-                float X = ((item.X / z) + (pictureBox1.Image.Width / 2)) - 10;
-                float Y = (Math.Abs((item.Y / z) - (pictureBox1.Image.Height / 2))) - 8;
-                if (X <= (float)pictureBox1.Image.Width && Y <= (float)pictureBox1.Image.Height)
+                float X = ((item.X / z) + (pictureBox1.BackgroundImage.Width / 2));
+                float Y = (Math.Abs((item.Y / z) - (pictureBox1.BackgroundImage.Height / 2)));
+                if (X <= (float)pictureBox1.BackgroundImage.Width && Y <= (float)pictureBox1.BackgroundImage.Height)
                 {
-                    g.DrawImage(Extensions.ResizeImage(Resources.npc, 20,20), X, Y);
+                    /*System.Drawing.Drawing2D.Matrix m = g.Transform;
+                    m.RotateAt(angle, new PointF(item.X, item.Y), System.Drawing.Drawing2D.MatrixOrder.Append);
+                    g.Transform = m;*/
+                   // g.DrawImage(Extensions.ResizeImage(Resources.gota, 10, 13), location.X - 6, location.Y - 8);
+                    AddPoint(new PointF(X, Y), angle);
                 }
             }
-            panel1.AutoScrollPosition = new Point((Convert.ToInt32(ls[ls.Count - 1].X + (pictureBox1.Image.Width / 2))) - (pictureBox1.DisplayRectangle.Width / 2), Convert.ToInt32(Math.Abs(ls[ls.Count - 1].Y - (pictureBox1.Image.Height / 2))) - (pictureBox1.DisplayRectangle.Height / 2));
+            panel1.AutoScrollPosition = new Point
+            {
+                X = Convert.ToInt32(ls[ls.Count - 1].X + (pictureBox1.BackgroundImage.Width / 2)) - (panel1.Width / 2),
+                Y = Convert.ToInt32(Math.Abs(ls[ls.Count - 1].Y - (pictureBox1.BackgroundImage.Height / 2)) - (panel1.Height / 2))
+            };
             pictureBox1.Refresh();
-        }
-        private void timer1_Tick(object sender, EventArgs e)
-        {
         }
 
         private void path_tooltip(object sender, MouseEventArgs e)
@@ -58,40 +60,28 @@ namespace NpcGenEditor
             {
                 double num = (double)(e.X - pictureBox1.BackgroundImage.Width / 2) + 0.5;
                 double num2 = (double)(-e.Y + pictureBox1.BackgroundImage.Height / 2) - 0.5;
-                text = string.Concat(string.Concat("X: " + num.ToString("F1"), "\nZ: "), num2.ToString("F1"));
-                Size clientSize = panel1.ClientSize;
-                int num3 = Convert.ToInt32(Math.Round((double)num + (double)(float)(pictureBox1.Image.Width / 2) - 0.5)) - clientSize.Width / 2;
-                Size clientSize2 = panel1.ClientSize;
-                int num4 = Convert.ToInt32(Math.Round((double)(0f - num2) + (double)(float)(pictureBox1.Image.Height / 2) - 0.5)) - clientSize2.Height / 2;
-                if (num3 > panel1.HorizontalScroll.Value && num3 < panel1.HorizontalScroll.Maximum)
-                {
-                    panel1.HorizontalScroll.Value = num3;
-                }
-                if (num4 > panel1.VerticalScroll.Minimum && num4 < panel1.VerticalScroll.Maximum)
-                {
-                    panel1.VerticalScroll.Value = num4;
-                }
-                text += $"\nscrol X: {num3}\nscrol Y: {num4}";
-                
+                text = string.Concat(string.Concat("X: " + num.ToString("F1"), "\nZ: "), num2.ToString("F1"));                
                 if (text != toolTip.GetToolTip(pictureBox1))
                 {
                     toolTip.SetToolTip(pictureBox1, text);
                 }
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_BackgroundImageChanged(object sender, EventArgs e)
-        {
+            location = new PointF(e.X, e.Y);
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
-            GetCoordinates(new List<PointF>() { MousePosition });
+            AddPoint(location, 0f);
+        }
+
+        public void AddPoint(PointF loc, float angle)
+        {
+            Graphics g = Graphics.FromImage(pictureBox1.BackgroundImage);
+            System.Drawing.Drawing2D.Matrix m = g.Transform;
+            m.RotateAt(angle, loc, System.Drawing.Drawing2D.MatrixOrder.Append);
+            g.Transform = m;
+            g.DrawImage(Extensions.ResizeImage(Resources.gota, 10, 13), loc.X - 6, loc.Y - 8);
+            pictureBox1.Refresh();
         }
     }
 }
